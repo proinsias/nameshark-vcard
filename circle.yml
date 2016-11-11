@@ -1,0 +1,10 @@
+dependencies:
+  pre:
+    -  pip install pytest
+
+test:
+  override:
+    - py.test
+
+  post:
+    - curl -sSL https://download.sourceclear.com/ci.sh | sh
