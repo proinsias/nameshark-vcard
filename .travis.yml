@@ -39,8 +39,11 @@ after_success:
  - bash <(curl -s https://codecov.io/bash)
 #- coveralls
 
-addons:
-    srcclr: true
+matrix:
+    include:
+        - python: 2.7
+          addons:
+             srcclr: true
 
 notifications:
  email:
