@@ -1,3 +1,24 @@
+# The MIT License (MIT)
+#
+# Copyright (c) 2016 Francis T. O'Donovan
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 """Convert vCard-formatted string to the JSON format expected by Name Shark."""
 
 # coding=utf-8
@@ -12,11 +33,11 @@ import vobject
 Names = namedtuple('Names', ['first_name', 'surname'])
 
 
-def get_names(fn):
+def get_names(fn_field):
     """
     Extract the first name and surname from a vCard 'fn' field.
 
-    :param fn: the input vCard 'fn' field.
+    :param fn_field: the input vCard 'fn' field.
     :return: a namedtuple containing the first name and surname.
 
     >>> get_names('John Smith')
@@ -28,7 +49,7 @@ def get_names(fn):
     try:
         import probablepeople as pp  # not python 2.6 compatible
         # Use probablepeople to tag the parts of the name.
-        full_name_dict = pp.tag(fn)[0]
+        full_name_dict = pp.tag(fn_field)[0]
 
         if 'GivenName' in full_name_dict:
             # If probablepeople has successfully extracted the first name,
@@ -43,18 +64,18 @@ def get_names(fn):
     except SyntaxError:
         pass
 
-    fn_split = fn.split(" ")
+    fn_field_split = fn_field.split(" ")
 
     if first_name is None:
         # If we can't get first name from probablepeople, assume it's the
         # first part of the string.
-        first_name = fn_split[0]
+        first_name = fn_field_split[0]
 
     if surname is None:
         # If we can't get surname from probablepeople, assume it's the
         # second part of the string, if that exists.
-        if len(fn_split) > 1:
-            surname = fn_split[1]
+        if len(fn_field_split) > 1:
+            surname = fn_field_split[1]
         else:
             surname = ""
 
@@ -111,8 +132,8 @@ def extract_contacts_from_vcard(vcard):
     # TODO: Add doctest above? or pytest
     contacts = []
 
-    for v in vobject.readComponents(vcard):
-        entry = extract_contact_from_component(v)
+    for v_component in vobject.readComponents(vcard):
+        entry = extract_contact_from_component(v_component)
         contacts.append(entry)
 
     return entry
@@ -162,13 +183,13 @@ def main():
 
     args = parser.parse_args()
 
-    with open(args.file, 'r') as f:
-        text = f.read()
+    with open(args.file, 'r') as input_file:
+        text = input_file.read()
 
     json_str = vcard_to_nameshark(text, args.group)
 
-    with open(args.group + ".json", 'w') as f:
-        f.write(json_str)
+    with open(args.group + ".json", 'w') as output_file:
+        output_file.write(json_str)
 
 
 if __name__ == "__main__":

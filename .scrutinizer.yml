@@ -1,14 +1,23 @@
+---
+
 build:
+    environment:
+        ruby: '2.3.1'
+        python: '3.5.0'
     tests:
         override:
             -
                 command: shellcheck-run
                 on_node: 1
-               
+
             -
                 command: pylint-run nameshark_vcard
                 on_node: 2
-                
+
+            -
+                command: tox
+                on_node: 3
+
 checks:
     python:
         code_rating: true

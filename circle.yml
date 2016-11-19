@@ -1,6 +1,7 @@
+---
 dependencies:
   pre:
-    -  pip install pytest
+    - pip install pytest
 
 test:
   override:

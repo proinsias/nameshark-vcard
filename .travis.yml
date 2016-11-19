@@ -1,53 +1,93 @@
+---
 sudo: false  # Use container-based infrastructure
 
 # safelist
 branches:
   only:
-  - production
-  - develop
+    - production
+    - develop
 
 language: python
 
+cache:
+  apt: true
+  bundler: true
+  directories:
+    - $HOME/.cache/pip
+
 python:
-  - "2.7"
   - "3.5"
 
-before_install:
- - echo "before_install"
- - echo $VIRTUAL_ENV
- - df -h
- - date
- - pwd
- - uname -a
- - git --version
- - git tag
- - python --version
- - python -m pip install -U pip
-
-install:
- - echo "install start"
- - python -m pip install -r requirements.txt
-#  - python setup.py install
-#  - python setup.py develop
-#  - make all
-
-script:
- - echo "script"
- - python -m pytest  # Use pyenv python to launch pytest
-
-after_success:
- - bash <(curl -s https://codecov.io/bash)
-#- coveralls
+addons:
+  apt:
+    sources:
+      - debian-sid    # Grab shellcheck from the Debian repo (o_O)
+    packages:
+      - shellcheck
 
 matrix:
-    include:
-        - python: 2.7
-          addons:
-             srcclr: true
+  include:
+    - python: 2.7
+      addons:
+        srcclr: true
+        apt:
+          sources:
+            - debian-sid    # Grab shellcheck from the Debian repo (o_O)
+          packages:
+            - shellcheck
+
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
+
+before_install:
+  - echo "before_install"
+  - echo $VIRTUAL_ENV
+  - df -h
+  - date
+  - pwd
+  - uname -a
+  - git config --global user.email "travis@travis.ci"  # overcommit Author
+  - git config --global user.name "Travis CI"  # overcommit Author
+  - git config --global hooks.copyrightholder "Francis T. O'Donovan"
+  - git --version
+  - git tag
+  - python --version
+  - python -m pip install -U pip wheel
+  - rvm install 2.3.2  # For overcommit
+  - ruby --version
+  - shellcheck --version
+
+install:
+  - echo "install start"
+  - bundle install
+  - python -m pip install --requirement requirements.txt
+  - bundle --version
+  - bundle-audit --version
+  - mdl --version
+  - overcommit --version
+  - reek --version
+  - rubocop --version
+  - ruby-lint --version
+  - travis version --skip-completion-check
+#   - python setup.py install
+#   - python setup.py develop
+#   - make all
+
+script:
+  - echo "script"
+  - overcommit --sign
+  - overcommit --sign pre-commit
+  - overcommit --run
+  - python -m pytest  # Use pyenv python to launch pytest
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+# - coveralls
 
 notifications:
- email:
-   recipients:
-   - francis.odonovan@gmail.com
- slack:
-   secure: PDtcvz//in9jj9g96rjAePhb59NizHGxrPZpmVXvYLNuYh2iN4i9GgBruLoySS5pg4cALgs69quof9c6lF8U75w0FfcOxfANb+6Y5Joh/uvR7IhPe9rZjadsXG4kNlSwfTcxMOc9mTHmyKi50WcnwWGVjPAU8uKnlUPxV3K3kjeuKD6QDOJuCtKgTKyeW92VvtMAKILBD+UOrkdr72eCwtQ+cReQ2JNgYndRgjcs6TxDRAq2OISrHSyX7/ISfqvHcOCnH8jazSFYbYcTZ7Sk9CnDGt+FDz+e8hNysI5T8sFGge6eiwyJQ7ivqdvbWYKS0AFeJA8BQwbrA7gt6jLaM5v5WLY7npVMAhkwtM2s6/Z2p1IsEqhaigoLINfyBw6MCbIDeZg1OJdocuWRNE+pfZgVXzC2XXcnbg+u5ChaqgqoKqN3/Y+W0IGZ4AXXWcT1XHVgB414j4TZ+t/bIlKMbcdD4n9tvmV9+zm+bZ8keFkWlMSac4bW7wX9gOQG4FMUGolznTinwlAwpCpjP22gM7M6BoDwg2URWE5qcXoJYERHdsvaOAOTlj3RnnBjsVZwbIfk2gbWmE0aKwk8l21PBhjiBsZvHPyBR6EeAUi8bktQUfdAImk53h0GYPeSJ6ocu8fas8NgBuZf5Ysc0RxQYnQUkqZZBO53BOScDr87tHE=
+  email:
+    recipients:
+      - francis.odonovan@gmail.com
+  slack:
+    # yamllint disable-line rule:line-length
+    secure: PDtcvz//in9jj9g96rjAePhb59NizHGxrPZpmVXvYLNuYh2iN4i9GgBruLoySS5pg4cALgs69quof9c6lF8U75w0FfcOxfANb+6Y5Joh/uvR7IhPe9rZjadsXG4kNlSwfTcxMOc9mTHmyKi50WcnwWGVjPAU8uKnlUPxV3K3kjeuKD6QDOJuCtKgTKyeW92VvtMAKILBD+UOrkdr72eCwtQ+cReQ2JNgYndRgjcs6TxDRAq2OISrHSyX7/ISfqvHcOCnH8jazSFYbYcTZ7Sk9CnDGt+FDz+e8hNysI5T8sFGge6eiwyJQ7ivqdvbWYKS0AFeJA8BQwbrA7gt6jLaM5v5WLY7npVMAhkwtM2s6/Z2p1IsEqhaigoLINfyBw6MCbIDeZg1OJdocuWRNE+pfZgVXzC2XXcnbg+u5ChaqgqoKqN3/Y+W0IGZ4AXXWcT1XHVgB414j4TZ+t/bIlKMbcdD4n9tvmV9+zm+bZ8keFkWlMSac4bW7wX9gOQG4FMUGolznTinwlAwpCpjP22gM7M6BoDwg2URWE5qcXoJYERHdsvaOAOTlj3RnnBjsVZwbIfk2gbWmE0aKwk8l21PBhjiBsZvHPyBR6EeAUi8bktQUfdAImk53h0GYPeSJ6ocu8fas8NgBuZf5Ysc0RxQYnQUkqZZBO53BOScDr87tHE=

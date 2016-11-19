@@ -12,13 +12,40 @@
 #
 # For a complete list of options that you can use to customize hooks, see:
 # https://github.com/brigade/overcommit#configuration
+#
+# required:     If true, this hook cannot be skipped via the SKIP
+#               environment variable
+# quiet:        If true, this hook does not display any output unless
+#               it warns/fails
+# description:  Message displayed while hook is running.
+#
+# Within a hook category, there is a special type of hook
+# configuration that applies to all hooks in the category. This
+# configuration looks like a normal hook configuration, except it has
+# the name ALL:
+#
+# PreCommit:
+#   ALL:
+#     problem_on_unmodified_line: warn
+#     requires_files: true
+#     required: false
+#     quiet: false
 
+---
 PreCommit:
   BashSyntax:
     enabled: true
     quiet: false
     include: '**/*.sh'
     required_executable: './scripts/bash_syntax.sh'
+  BundleAudit:
+    enabled: true
+  BundleCheck:
+    enabled: true
+  BundleOutdated:
+    enabled: true
+  CaseConflicts:
+    enabled: true
   CopyrightYear:
     enabled: true
     quiet: false
@@ -33,6 +60,11 @@ PreCommit:
       - 'scripts/bash_syntax.sh'
       - 'scripts/copyright_year.sh'
       - 'scripts/freespace.sh'
+  FixMe:
+    enabled: true
+  ForbiddenBranches:
+    enabled: true
+    branches: ['production']
   HardTabs:
     enabled: true
   HtmlHint:
@@ -49,20 +81,36 @@ PreCommit:
     enabled: true
   JsonSyntax:
     enabled: true
+  LicenseHeader:
+    enabled: true
+    license_file: 'LICENSE'
+    include: '**/*.py'
+  # Requires overcommit have access to git version 2.10 or higher.
+  # LineEndings:
+  #   enabled: true
+  LocalPathsInGemfile:
+    enabled: true
+  Mdl:
+    enabled: true
   Pep257:
     enabled: true
   Pep8:
     enabled: true
+    flags: ['--max-line-length=120']
   Pyflakes:
     enabled: true
+    flags: ['--max-line-length=120']
   Pylint:
     enabled: true
   PythonFlake8:
     enabled: true
-  SemiStandard:
+  Reek:
     enabled: true
-  Standard:
+  RuboCop:
     enabled: true
+  RubyLint:
+    enabled: true
+    exclude: '**/mdl.rb'
   ShellCheck:
     enabled: true
   Sqlint:
@@ -79,12 +127,14 @@ PreCommit:
     enabled: true
   XmlSyntax:
     enabled: true
+  YamlLint:
+    enabled: true
   YamlSyntax:
     enabled: true
     include:
       - '**/*.yaml'
       - '**/*.yml'
-      - '**/.*.yml' # To parse this!
+      - '**/.*.yml'  # To parse this!
 
 CommitMsg:
   HardTabs:
@@ -99,12 +149,16 @@ CommitMsg:
     max_subject_width: 50
 
 PostCheckout:
+  BundleInstall:
+    enabled: true
   SubmoduleStatus:
     enabled: true
     quiet: false
     recursive: true
 
 PostCommit:
+  BundleInstall:
+    enabled: true
   GitGuilt:
     enabled: true
     requires_files: false
@@ -114,12 +168,16 @@ PostCommit:
     recursive: true
 
 PostMerge:
+  BundleInstall:
+    enabled: true
   SubmoduleStatus:
     enabled: true
     quiet: false
     recursive: true
 
 PostRewrite:
+  BundleInstall:
+    enabled: true
   SubmoduleStatus:
     enabled: true
     quiet: false
@@ -128,6 +186,7 @@ PostRewrite:
 PrePush:
   ProtectedBranches:
     enabled: true
+    branches: ['production']
 
 PreRebase:
   MergedCommits:

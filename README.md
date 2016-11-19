@@ -1,4 +1,5 @@
 # nameshark-vcard
+
 Converts vCards to the JSON format expected by the Name Shark app
 
 [![GitHub tag](https://img.shields.io/github/tag/proinsias/nameshark-vcard.svg)]()
@@ -47,23 +48,22 @@ project to experiment with various services prior to deploying them in
 my private repos. If you have a favorite service that I'm missing,
 feel free to create an issue!
 
-Branch Organization
-------------
+## Branch Organization
 
     ├── production        <- Production branch with full test set.
     ├── develop           <- Development branch with reduced test set.
     └── developer/change  <- Developer sandbox branches without testing.
 
 * Python Versions Tested:
-    - 2.7 (via Travis & AppVeyor)
-    - 3.4 (via Travis & AppVeyor)
-    - 3.5 (via Travis)
-    - 3.5-dev (via Travis)
-    - 3.6-dev (via Travis)
-    - nightly (via Travis)
-    - pypy (via Travis)
-    - pypy3 (via Travis)
+    + 2.7 (via Travis & AppVeyor)
+    + 3.4 (via Travis & AppVeyor)
+    + 3.5 (via Travis)
+    + 3.5-dev (via Travis)
+    + 3.6-dev (via Travis)
+    + nightly (via Travis)
+    + pypy (via Travis)
+    + pypy3 (via Travis)
 * Platforms Tested:
-    - Ubuntu 12.04 LTS Server Edition 64 bit (via Travis)
-    - x86 (via AppVeyor)
-    - x64 (via AppVeyor)
+    + Ubuntu 12.04 LTS Server Edition 64 bit (via Travis)
+    + x86 (via AppVeyor)
+    + x64 (via AppVeyor)

@@ -1,9 +1,15 @@
 doublemetaphone
+flake8
 future
+pep257
+pep8
 probableparsing
 probablepeople
+pyflakes
+pylint
+pytest
 python-crfsuite
 python-dateutil
 six
 vobject
-pytest
+yamllint
