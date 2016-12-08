@@ -43,43 +43,50 @@ def get_names(fn_field):
     >>> get_names('John Smith')
     Names(first_name='John', surname='Smith')
     """
-    first_name = None
-    surname = None
+    if fn_field is not None:
+        first_name = None
+        surname = None
 
-    try:
-        import probablepeople as pp  # not python 2.6 compatible
-        # Use probablepeople to tag the parts of the name.
-        full_name_dict = pp.tag(fn_field)[0]
+        try:
+            import probablepeople as pp  # not python 2.6 compatible
+            # Use probablepeople to tag the parts of the name.
 
-        if 'GivenName' in full_name_dict:
-            # If probablepeople has successfully extracted the first name,
-            # use it.
-            first_name = full_name_dict['GivenName']
+            full_name_dict = pp.tag(fn_field)[0]
 
-        if 'Surname' in full_name_dict:
-            # If probablepeople has successfully extracted the surname, use it.
-            surname = full_name_dict['Surname']
-    except ImportError:
-        pass
-    except SyntaxError:
-        pass
+            if 'GivenName' in full_name_dict:
+                # If probablepeople has successfully extracted the first name,
+                # use it.
+                first_name = full_name_dict['GivenName']
 
-    fn_field_split = fn_field.split(" ")
+            if 'Surname' in full_name_dict:
+                # If probablepeople has successfully extracted the surname, use it.
+                surname = full_name_dict['Surname']
+        except ImportError:
+            pass
+        except SyntaxError:
+            pass
 
-    if first_name is None:
-        # If we can't get first name from probablepeople, assume it's the
-        # first part of the string.
-        first_name = fn_field_split[0]
+        fn_field_split = fn_field.split(' ')
 
-    if surname is None:
-        # If we can't get surname from probablepeople, assume it's the
-        # second part of the string, if that exists.
-        if len(fn_field_split) > 1:
-            surname = fn_field_split[1]
-        else:
-            surname = ""
+        if first_name is None:
+            # If we can't get first name from probablepeople, assume it's the
+            # first part of the string.
+            first_name = fn_field_split[0]
+
+        if surname is None:
+            # If we can't get surname from probablepeople, assume it's the
+            # second part of the string, if that exists.
+            if len(fn_field_split) > 1:
+                surname = fn_field_split[1]
+            else:
+                surname = ''
+    else:
+        first_name = ''
+        surname = ''
 
     names = Names(first_name, surname)
+
+    print('Extracting data for ', first_name, ' ', surname)
 
     return names
 
@@ -112,12 +119,12 @@ def extract_contact_from_component(component):
     names = get_names(component.getChildValue('fn'))
     photo_data = get_photo(component.getChildValue('photo'))
 
-    if photo_data == "":
-        print("Warning: Missing photo for " + names.first_name + " " +
-              names.surname + "...!")
+    if photo_data == '':
+        print('Warning: Missing photo for ' + names.first_name + ' ' +
+              names.surname + '...!')
 
-    entry = {"first": names.first_name, "last": names.surname,
-             "photoData": photo_data, "details": ""}
+    entry = {'first': names.first_name, 'last': names.surname,
+             'photoData': photo_data, 'details': ''}
 
     return entry
 
@@ -148,7 +155,7 @@ def convert_to_nameshark(contacts, group_name):
     :return: the list containing contact info extracted from a vCard.
     """
     # TODO: Add doctest above? or pytest
-    shark = {"name": group_name, "contacts": contacts}
+    shark = {'name': group_name, 'contacts': contacts}
     json_str = json.dumps(shark, separators=(',', ': '))
 
     return json_str
@@ -178,8 +185,8 @@ def main():
     # TODO: Add pytest?
     # TODO: Switch to using click, and apply click-man
     parser = argparse.ArgumentParser()
-    parser.add_argument("file", help="the input file")
-    parser.add_argument("group", help="the output group name")
+    parser.add_argument('file', help='the input file')
+    parser.add_argument('group', help='the output group name')
 
     args = parser.parse_args()
 
@@ -188,9 +195,9 @@ def main():
 
     json_str = vcard_to_nameshark(text, args.group)
 
-    with open(args.group + ".json", 'w') as output_file:
+    with open(args.group + '.json', 'w') as output_file:
         output_file.write(json_str)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
