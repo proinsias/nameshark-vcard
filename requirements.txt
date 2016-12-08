@@ -19,11 +19,11 @@ py==1.4.31                # via pytest
 pycodestyle==2.2.0        # via flake8
 pyflakes==1.3.0
 pylint==1.6.4
-pytest==3.0.4
-python-crfsuite==0.8.4
+pytest==3.0.5
+python-crfsuite==0.9
 python-dateutil==2.6.0
 pyyaml==3.12              # via yamllint
 six==1.10.0
 vobject==0.9.3
 wrapt==1.10.8             # via astroid
-yamllint==1.5.0
+yamllint==1.6.0
