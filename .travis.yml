@@ -60,7 +60,7 @@ before_install:
 install:
   - echo "install start"
   - bundle install
-  - python -m pip install --requirement requirements.txt
+  - python -m pip install --require-hashes --requirement requirements.txt
   - bundle --version
   - bundle-audit --version
   - mdl --version
