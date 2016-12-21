@@ -67,6 +67,6 @@ vobject==0.9.3 \
     --hash=sha256:10b150b87ee5fffefd3aa1ea12f31aab45a7b7d010d1ce6816afaff8db726520
 wrapt==1.10.8 \
     --hash=sha256:4ea17e814e39883c6cf1bb9b0835d316b2f69f0f0882ffe7dad1ede66ba82c73  # via astroid
-yamllint==1.5.0 \
-    --hash=sha256:aa7c864a269cac655c2899abef92fb195abcd1141bf7b38ea436a71994c9c9e6 \
-    --hash=sha256:c33c9eb10f3c95eaa042c3bab641403cbba338cd0fa3f4fb132fb6a7a170c890
+yamllint==1.6.0 \
+    --hash=sha256:9ecc201538d7f2f8ff879cf11e0ff4ff35d5a9f901f63ba361957c70668a0e53 \
+    --hash=sha256:a095c98728c95918b8a4153c855c13e158315f8150ddad1cf9c3e831f9d7ba87
