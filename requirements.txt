@@ -4,9 +4,9 @@
 #
 #    pip-compile --generate-hashes --output-file requirements.txt requirements.in
 #
-astroid==1.4.8 \
-    --hash=sha256:3ffb26342b3526390646697ed5cde4714d2cc46c50e8a13ced2b303fcb59c11d \
-    --hash=sha256:5f064785a7e45ed519285f2eb30b795e58a4932a0736b32030da6fef3394ddb3  # via pylint
+astroid==1.4.9 # \
+    --hash=sha256:944400d94e45865af150fb98700b27b788ddee5ad17c77d0725f67ac271f7a10 \
+    --hash=sha256:a483e7891ce3a06dadfc6cb9095b0938aca58940d43576d72e4502b480c085d7
 doublemetaphone==0.1 \
     --hash=sha256:ac85b6757b28f5161b24c4aa25a923513a52edebedfa60158eed088ae468cf18 \
     --hash=sha256:ad45e266943cb8d7977d6dd3f883f9476669b38b6f0df3f1c521b36b8a2b0ed7
