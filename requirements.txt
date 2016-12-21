@@ -4,13 +4,13 @@
 #
 #    pip-compile --generate-hashes --output-file requirements.txt requirements.in
 #
-astroid==1.4.8 \
+astroid==1.4.9 \
     --hash=sha256:3ffb26342b3526390646697ed5cde4714d2cc46c50e8a13ced2b303fcb59c11d \
     --hash=sha256:5f064785a7e45ed519285f2eb30b795e58a4932a0736b32030da6fef3394ddb3  # via pylint
 doublemetaphone==0.1 \
     --hash=sha256:ac85b6757b28f5161b24c4aa25a923513a52edebedfa60158eed088ae468cf18 \
     --hash=sha256:ad45e266943cb8d7977d6dd3f883f9476669b38b6f0df3f1c521b36b8a2b0ed7
-flake8==3.2.0 \
+flake8==3.2.1 \
     --hash=sha256:9341ad4e5f71298139ecb64f38f412f8fbc52b4237317e14f5356e5b0c2dcbf3 \
     --hash=sha256:f4c3c0aeb8018319993b2c47a2491fb7ea8b3a51c7a86cba38301ae1561b364e
 future==0.16.0 \
@@ -33,7 +33,7 @@ probableparsing==0.0.1 \
     --hash=sha256:8114bbf889e1f9456fe35946454c96e42a6ee2673a90d4f1f9c46a406f543767
 probablepeople==0.5.2 \
     --hash=sha256:c3d7e41dd7bd0110553efa972d0e043b712e6bf9f5c20f9b7064f1e5003c6864
-py==1.4.31 \
+py==1.4.32 \
     --hash=sha256:4a3e4f3000c123835ac39cab5ccc510642153bc47bc1f13e2bbb53039540ae69 \
     --hash=sha256:a6501963c725fc2554dabfece8ae9a8fb5e149c0ac0a42fd2b02c5c1c57fc114  # via pytest
 pycodestyle==2.2.0 \
@@ -45,10 +45,10 @@ pyflakes==1.3.0 \
 pylint==1.6.4 \
     --hash=sha256:eeeeb81c8095586b417ea0602c01f53d1c87694fcf3c866f8681457f94875a8e \
     --hash=sha256:ef901a34b62ed7a734370ba5b162d890231ba8822abe88c6dda1268e2575f5f1
-pytest==3.0.4 \
+pytest==3.0.5 \
     --hash=sha256:879fee2c1fdbaacd1bf2c0047677c6dd4aee05b9c1e64330b34d130a584fa40d \
     --hash=sha256:f043cb1eaafc9a10c9de77a7d57ba9ccb1d919edb45926b83c29e2482a41101e
-python-crfsuite==0.8.4 \
+python-crfsuite==0.9.1 \
     --hash=sha256:d54ec1760f9e912abbb42c7fb8d55c2eaabb78d7daa26ee0ae39d010fe8e4426
 python-dateutil==2.6.0 \
     --hash=sha256:3acbef017340600e9ff8f2994d8f7afd6eacb295383f286466a6df3961e486f0 \
@@ -64,6 +64,6 @@ vobject==0.9.3 \
     --hash=sha256:10b150b87ee5fffefd3aa1ea12f31aab45a7b7d010d1ce6816afaff8db726520
 wrapt==1.10.8 \
     --hash=sha256:4ea17e814e39883c6cf1bb9b0835d316b2f69f0f0882ffe7dad1ede66ba82c73  # via astroid
-yamllint==1.5.0 \
+yamllint==1.6.0 \
     --hash=sha256:aa7c864a269cac655c2899abef92fb195abcd1141bf7b38ea436a71994c9c9e6 \
     --hash=sha256:c33c9eb10f3c95eaa042c3bab641403cbba338cd0fa3f4fb132fb6a7a170c890
