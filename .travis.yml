@@ -9,21 +9,9 @@ branches:
 
 language: python
 
-cache:
-  apt: true
-  bundler: true
-  directories:
-    - $HOME/.cache/pip
-
 python:
+  - "2.7"
   - "3.5"
-
-addons:
-  apt:
-    sources:
-      - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-    packages:
-      - shellcheck
 
 matrix:
   include:
@@ -36,53 +24,34 @@ matrix:
           packages:
             - shellcheck
 
+cache:
+  apt: true
+  bundler: true
+  directories:
+    - $HOME/.cache/pip
+
+addons:
+  apt:
+    sources:
+      - debian-sid    # Grab shellcheck from the Debian repo (o_O)
+    packages:
+      - shellcheck
+
 before_cache:
-  - rm -f $HOME/.cache/pip/log/debug.log
+  - ci/travis.before_cache.sh
 
 before_install:
-  - echo "before_install"
-  - echo $VIRTUAL_ENV
-  - df -h
-  - date
-  - pwd
-  - uname -a
-  - git config --global user.email "travis@travis.ci"  # overcommit Author
-  - git config --global user.name "Travis CI"  # overcommit Author
-  - git config --global hooks.copyrightholder "Francis T. O'Donovan"
-  - git --version
-  - git tag
-  - python --version
-  - python -m pip install -U pip wheel
-  - rvm install 2.3.2  # For overcommit
-  - ruby --version
-  - shellcheck --version
+  - travis_retry rvm install 2.3.2 && rvm --default use 2.3.2
+  - ci/travis.before_install.sh
 
 install:
-  - echo "install start"
-  - bundle install
-  - python -m pip install --require-hashes --requirement requirements.txt
-  - bundle --version
-  - bundle-audit --version
-  - mdl --version
-  - overcommit --version
-  - reek --version
-  - rubocop --version
-  - ruby-lint --version
-  - travis version --skip-completion-check
-#   - python setup.py install
-#   - python setup.py develop
-#   - make all
+  - ci/travis.install.sh
 
 script:
-  - echo "script"
-  - overcommit --sign
-  - overcommit --sign pre-commit
-  - overcommit --run
-  - python -m pytest  # Use pyenv python to launch pytest
+  - ci/travis.script.sh
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
-# - coveralls
+  - ci/travis.after_success.sh
 
 notifications:
   email:
