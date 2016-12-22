@@ -9,14 +9,18 @@ build:
             -
                 command: shellcheck-run
                 on_node: 1
-
             -
                 command: pylint-run nameshark_vcard
                 on_node: 2
-
             -
                 command: tox
                 on_node: 3
+            -
+                command: './run-tests.sh'
+                coverage:
+                    file: '.coverage'
+                    #config_file: '.coveragerc'
+                    format: 'py-cc'
 
 checks:
     python:

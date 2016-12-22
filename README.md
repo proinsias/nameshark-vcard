@@ -35,8 +35,6 @@ Converts vCards to the JSON format expected by the Name Shark app
 [![Scrutinizer Production Code Quality](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/badges/quality-score.png?b=production)](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/?branch=production)
 [![Scrutinizer Development Code Quality](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/?branch=develop)
 
-[![ReviewNinja](https://app.review.ninja/57427690/badge)](https://app.review.ninja/proinsias/nameshark-vcard)
-
 [![Requires Production](https://requires.io/github/proinsias/nameshark-vcard/requirements.svg?branch=production)](https://requires.io/github/proinsias/nameshark-vcard/requirements/?branch=production)
 [![Requires Development](https://requires.io/github/proinsias/nameshark-vcard/requirements.svg?branch=develop)](https://requires.io/github/proinsias/nameshark-vcard/requirements/?branch=develop)
 [![VersionEye](https://www.versioneye.com/user/projects/57244381ba37ce00350af8c3/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57244381ba37ce00350af8c3)

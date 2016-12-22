@@ -13,6 +13,11 @@ coverage==4.2 \
     --hash=sha256:a5dda361f947dd67891f73a373ef63059cf3e551ac248dd3e91f76ea1b39cdda \
     --hash=sha256:b8faa97f0d3708c9ec487367fbcee630117d8ce161fe6b185b2e72e48be2275b \
     --hash=sha256:e312776d3ef04632ec742ce2d2b7048b635073e0245e4f44dfe8b08cc50ac656
+coveralls==1.1 \
+    --hash=sha256:34160385c13b0c43691ab11c080d4b10dabe3280fc0b2173c731efc5db836808 \
+    --hash=sha256:ff403f4ddf6937327ef267735ac987a0f8fdd083d0f26f0002549ef68451e886
+docopt==0.6.2 \
+    --hash=sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491  # via coveralls
 requests==2.12.4 \
     --hash=sha256:000748df49e087784441b2621c50fb81046c5c8e80e0d91674ffad65b9e13844 \
-    --hash=sha256:ed98431a0631e309bb4b63c81d561c1654822cb103de1ac7b47e45c26be7ae34  # via codacy-coverage, codeclimate-test-reporter
+    --hash=sha256:ed98431a0631e309bb4b63c81d561c1654822cb103de1ac7b47e45c26be7ae34  # via codacy-coverage, codeclimate-test-reporter, coveralls
