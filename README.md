@@ -19,6 +19,7 @@ Converts vCards to the JSON format expected by the Name Shark app
 [![Scrutinizer Development Build](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/badges/build.png?b=develop)](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/build-status/develop)
 [![AppVeyor Production Build](https://ci.appveyor.com/api/projects/status/0ta82u4piyao3ayg/branch/production?svg=true)](https://ci.appveyor.com/project/proinsias/nameshark-vcard)
 [![AppVeyor Development Build](https://ci.appveyor.com/api/projects/status/0ta82u4piyao3ayg/branch/develop?svg=true)](https://ci.appveyor.com/project/proinsias/nameshark-vcard)
+[![CircleCI](https://circleci.com/gh/proinsias/nameshark-vcard.svg?style=svg)](https://circleci.com/gh/proinsias/nameshark-vcard)
 
 [![Codecov Production Coverage](https://codecov.io/gh/proinsias/nameshark-vcard/branch/production/graph/badge.svg)](https://codecov.io/gh/proinsias/nameshark-vcard/branch/production)
 [![Codecov Development Coverage](https://codecov.io/gh/proinsias/nameshark-vcard/branch/develop/graph/badge.svg)](https://codecov.io/gh/proinsias/nameshark-vcard/branch/develop)
