@@ -41,6 +41,7 @@ def get_names(fn_field):
     :return: a namedtuple containing the first name and surname.
 
     >>> get_names('John Smith')
+    Extracting data for John Smith
     Names(first_name='John', surname='Smith')
     """
     if fn_field is not None:
@@ -59,7 +60,8 @@ def get_names(fn_field):
                 first_name = full_name_dict['GivenName']
 
             if 'Surname' in full_name_dict:
-                # If probablepeople has successfully extracted the surname, use it.
+                # If probablepeople has successfully extracted the surname,
+                # use it.
                 surname = full_name_dict['Surname']
         except ImportError:
             pass
@@ -72,6 +74,8 @@ def get_names(fn_field):
             # If we can't get first name from probablepeople, assume it's the
             # first part of the string.
             first_name = fn_field_split[0]
+            if first_name == surname:
+                first_name = ''
 
         if surname is None:
             # If we can't get surname from probablepeople, assume it's the
@@ -86,7 +90,7 @@ def get_names(fn_field):
 
     names = Names(first_name, surname)
 
-    print('Extracting data for ', first_name, ' ', surname)
+    print('Extracting data for ' + first_name + ' ' + surname)
 
     return names
 
@@ -101,7 +105,7 @@ def get_photo(photo):
     # TODO: Add doctest above? or pytest
     if photo is not None:
         photo_data = base64.b64encode(photo)
-        photo_data = "data:image/jpeg;base64," + photo_data
+        photo_data = "data:image/jpeg;base64," + str(photo_data)
     else:
         photo_data = ""
 
@@ -143,20 +147,20 @@ def extract_contacts_from_vcard(vcard):
         entry = extract_contact_from_component(v_component)
         contacts.append(entry)
 
-    return entry
+    return contacts
 
 
-def convert_to_nameshark(contacts, group_name):
+def convert_to_nameshark(group_name, contacts,):
     """
     Convert a list containing contact info into JSON for Name Shark.
 
-    :param contacts:
     :param group_name: the Name Shark group to use.
+    :param contacts:
     :return: the list containing contact info extracted from a vCard.
     """
     # TODO: Add doctest above? or pytest
     shark = {'name': group_name, 'contacts': contacts}
-    json_str = json.dumps(shark, separators=(',', ': '))
+    json_str = json.dumps(shark, sort_keys=True, indent=4)
 
     return json_str
 
