@@ -4,9 +4,9 @@
 #
 #    pip-compile --generate-hashes --output-file requirements.txt requirements.in
 #
-astroid==1.4.8 \
-    --hash=sha256:3ffb26342b3526390646697ed5cde4714d2cc46c50e8a13ced2b303fcb59c11d \
-    --hash=sha256:5f064785a7e45ed519285f2eb30b795e58a4932a0736b32030da6fef3394ddb3  # via pylint
+astroid==1.4.9 # \
+    --hash=sha256:944400d94e45865af150fb98700b27b788ddee5ad17c77d0725f67ac271f7a10 \
+    --hash=sha256:a483e7891ce3a06dadfc6cb9095b0938aca58940d43576d72e4502b480c085d7
 doublemetaphone==0.1 \
     --hash=sha256:ac85b6757b28f5161b24c4aa25a923513a52edebedfa60158eed088ae468cf18 \
     --hash=sha256:ad45e266943cb8d7977d6dd3f883f9476669b38b6f0df3f1c521b36b8a2b0ed7 \
@@ -42,9 +42,9 @@ probableparsing==0.0.1 \
     --hash=sha256:8114bbf889e1f9456fe35946454c96e42a6ee2673a90d4f1f9c46a406f543767
 probablepeople==0.5.2 \
     --hash=sha256:c3d7e41dd7bd0110553efa972d0e043b712e6bf9f5c20f9b7064f1e5003c6864
-py==1.4.31 \
-    --hash=sha256:4a3e4f3000c123835ac39cab5ccc510642153bc47bc1f13e2bbb53039540ae69 \
-    --hash=sha256:a6501963c725fc2554dabfece8ae9a8fb5e149c0ac0a42fd2b02c5c1c57fc114  # via pytest
+py==1.4.32 # \
+    --hash=sha256:2d4bba2e25fff58140e6bdce1e485e89bb59776adbe01d490baa6b1f37a3dd6b \
+    --hash=sha256:c4b89fd1ff1162375115608d01f77c38cca1d0f28f37fd718005e19b28be41a7
 pycodestyle==2.2.0 \
     --hash=sha256:60c4e1c36f301ac539a550a29e9d16862069ec240472d86e5e71c4fc645829cb \
     --hash=sha256:df81dc3293e0123e2e8d1f2aaf819600e4ae287d8b3af8b72181af50257e5d9a  # via flake8
