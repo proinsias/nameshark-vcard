@@ -1,7 +1,12 @@
 ---
+machine:
+  python:
+    version: 3.5.2
+
 dependencies:
   pre:
     - pip install pytest
+    - pip install pytest-circleci
 
 test:
   override:

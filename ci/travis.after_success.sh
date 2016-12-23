@@ -12,5 +12,6 @@ if [ "${TRAVIS_BRANCH}" == "develop" ]; then
     if [ ! -z "${CODECLIMATE_REPO_TOKEN}" ]; then
        codeclimate-test-reporter
     fi
+
+    coveralls
 fi
-# coveralls
