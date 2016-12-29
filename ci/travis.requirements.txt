@@ -4,9 +4,9 @@
 #
 #    pip-compile --generate-hashes --output-file travis.requirements.txt travis.requirements.in
 #
-codacy-coverage==1.3.3 \
-    --hash=sha256:0929e7ce4e74fb7578e6d6dc9ee7dc2707398d6605702a1bd5ad90d4647647d7 \
-    --hash=sha256:89632f086c9f422b85eac370fce1e766174abd5de9a6f7a5c5749b008a8dbbf1
+codacy-coverage==1.3.6 \
+    --hash=sha256:a3fc9319cfa863132f10908e70c8158cbb1e180f3ecf68e39a73514d3487fadf \
+    --hash=sha256:1164b9c02e2fa2357cc84d53036a9099a69366362e5076b455bd19ed6f0f9670
 codeclimate-test-reporter==0.2.0 \
     --hash=sha256:2e013425fae1359c9971fdc05175bfd6b75dd49eacd804c6d284b69fc1c603e5
 coverage==4.3.3 \
