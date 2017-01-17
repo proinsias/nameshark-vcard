@@ -30,9 +30,16 @@
 #     requires_files: true
 #     required: false
 #     quiet: false
+# SKIP=RuboCop git commit
+# ONLY=RuboCop git commit
+# OVERCOMMIT_DISABLE=1 ./my-custom-script
 
 ---
 PreCommit:
+  ALL:
+    # report: report errors/warnings as-is regardless of line location (default)
+    # warn: report errors as warnings if they are on lines you didn't modify
+    problem_on_unmodified_line: warn
   BashSyntax:
     enabled: true
     quiet: false
@@ -97,12 +104,16 @@ PreCommit:
     enabled: true
   Pep8:
     enabled: true
-    flags: ['--max-line-length=120']
+    flags:
+      - '--max-line-length=120'
   Pyflakes:
     enabled: true
-    flags: ['--max-line-length=120']
+    flags:
+      - '--max-line-length=120'
   Pylint:
     enabled: true
+    flags:
+      - '--max-line-length=120'
   PythonFlake8:
     enabled: true
   Reek:
@@ -114,6 +125,10 @@ PreCommit:
     exclude: '**/mdl.rb'
   ShellCheck:
     enabled: true
+    flags:
+      - '--format=gcc'
+      - '--external-sources'
+      - '--shell=bash'
   Sqlint:
     enabled: true
   TrailingWhitespace:
