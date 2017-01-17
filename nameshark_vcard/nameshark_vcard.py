@@ -42,7 +42,7 @@ def get_pp_names(fn_field):
 
     >>> get_names('John Smith')
     Extracting data for John Smith
-    NAMES(first_name='John', surname='Smith')
+    Names(first_name='John', surname='Smith')
     """
     first_name = None
     surname = None
@@ -77,7 +77,7 @@ def get_names(fn_field):
 
     >>> get_names('John Smith')
     Extracting data for John Smith
-    NAMES(first_name='John', surname='Smith')
+    Names(first_name='John', surname='Smith')
     """
     names = get_pp_names(fn_field)
     first_name = names.first_name
