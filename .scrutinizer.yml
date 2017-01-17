@@ -16,7 +16,7 @@ build:
                 command: tox
                 on_node: 3
             -
-                command: './run-tests.sh'
+                command: 'pytest'
                 coverage:
                     file: '.coverage'
                     #config_file: '.coveragerc'

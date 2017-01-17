@@ -25,12 +25,47 @@
 
 import base64
 import json
-from collections import namedtuple
+import collections
 
 import argparse
 import vobject
 
-Names = namedtuple('Names', ['first_name', 'surname'])
+NAMES = collections.namedtuple('Names', ['first_name', 'surname'])
+
+
+def get_pp_names(fn_field):
+    """
+    Use probablepeople to extract firstname/surname from vCard 'fn' field.
+
+    :param fn_field: the input vCard 'fn' field.
+    :return: a namedtuple containing the first name and surname.
+
+    >>> get_names('John Smith')
+    Extracting data for John Smith
+    NAMES(first_name='John', surname='Smith')
+    """
+    first_name = None
+    surname = None
+
+    try:
+        import probablepeople as pp  # not python 2.6 compatible
+        # Use probablepeople to tag the parts of the name.
+
+        full_name_dict = pp.tag(fn_field)[0]
+
+        if 'GivenName' in full_name_dict:
+            # If probablepeople has successfully extracted the first name,
+            # use it.
+            first_name = full_name_dict['GivenName']
+
+        if 'Surname' in full_name_dict:
+            # If probablepeople has successfully extracted the surname,
+            # use it.
+            surname = full_name_dict['Surname']
+    except (ImportError, SyntaxError, TypeError) as error:
+        print(error)
+
+    return NAMES(first_name, surname)
 
 
 def get_names(fn_field):
@@ -42,57 +77,35 @@ def get_names(fn_field):
 
     >>> get_names('John Smith')
     Extracting data for John Smith
-    Names(first_name='John', surname='Smith')
+    NAMES(first_name='John', surname='Smith')
     """
-    if fn_field is not None:
-        first_name = None
-        surname = None
+    names = get_pp_names(fn_field)
+    first_name = names.first_name
+    surname = names.surname
 
-        try:
-            import probablepeople as pp  # not python 2.6 compatible
-            # Use probablepeople to tag the parts of the name.
-
-            full_name_dict = pp.tag(fn_field)[0]
-
-            if 'GivenName' in full_name_dict:
-                # If probablepeople has successfully extracted the first name,
-                # use it.
-                first_name = full_name_dict['GivenName']
-
-            if 'Surname' in full_name_dict:
-                # If probablepeople has successfully extracted the surname,
-                # use it.
-                surname = full_name_dict['Surname']
-        except ImportError:
-            pass
-        except SyntaxError:
-            pass
-
+    try:
         fn_field_split = fn_field.split(' ')
+    except TypeError:
+        fn_field_split = ['']
 
-        if first_name is None:
-            # If we can't get first name from probablepeople, assume it's the
-            # first part of the string.
-            first_name = fn_field_split[0]
-            if first_name == surname:
-                first_name = ''
+    if first_name is None:
+        # If we can't get first name from probablepeople, assume it's the
+        # first part of the string.
+        first_name = fn_field_split[0]
+        if first_name == surname:
+            first_name = ''
 
-        if surname is None:
-            # If we can't get surname from probablepeople, assume it's the
-            # second part of the string, if that exists.
-            if len(fn_field_split) > 1:
-                surname = fn_field_split[1]
-            else:
-                surname = ''
-    else:
-        first_name = ''
-        surname = ''
-
-    names = Names(first_name, surname)
+    if surname is None:
+        # If we can't get surname from probablepeople, assume it's the
+        # second part of the string, if that exists.
+        if len(fn_field_split) > 1:
+            surname = fn_field_split[1]
+        else:
+            surname = ''
 
     print('Extracting data for ' + first_name + ' ' + surname)
 
-    return names
+    return NAMES(first_name, surname)
 
 
 def get_photo(photo):
@@ -119,7 +132,6 @@ def extract_contact_from_component(component):
     :param component: the input vCard component text.
     :return: a dictionary containing the extracted contact info.
     """
-    # TODO: Add doctest above? or pytest
     names = get_names(component.getChildValue('fn'))
     photo_data = get_photo(component.getChildValue('photo'))
 
@@ -140,7 +152,6 @@ def extract_contacts_from_vcard(vcard):
     :param vcard: the vCard text to convert.
     :return: a list containing the extracted contact info.
     """
-    # TODO: Add doctest above? or pytest
     contacts = []
 
     for v_component in vobject.readComponents(vcard):
@@ -150,7 +161,7 @@ def extract_contacts_from_vcard(vcard):
     return contacts
 
 
-def convert_to_nameshark(group_name, contacts,):
+def convert_to_nameshark(group_name, contacts, ):
     """
     Convert a list containing contact info into JSON for Name Shark.
 
@@ -158,7 +169,6 @@ def convert_to_nameshark(group_name, contacts,):
     :param contacts:
     :return: the list containing contact info extracted from a vCard.
     """
-    # TODO: Add doctest above? or pytest
     shark = {'name': group_name, 'contacts': contacts}
     json_str = json.dumps(shark, sort_keys=True, indent=4)
 
@@ -173,7 +183,6 @@ def vcard_to_nameshark(vcard, group_name):
     :param group_name: the Name Shark group to use.
     :return: JSON version of vCard input.
     """
-    # TODO: Add doctest above? or pytest
     contacts = extract_contacts_from_vcard(vcard)
     json_str = convert_to_nameshark(group_name, contacts)
 
