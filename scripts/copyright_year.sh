@@ -32,20 +32,17 @@ function test_file {
     if [ ! -f "${file}" ] ; then
         return
     fi
-    if grep 'Copyright ' "${file}" | grep -v grep >/dev/null
-    then
+    if grep 'Copyright ' "${file}" | grep -v grep >/dev/null ; then
         year=$(date +%Y)
         cr_holder=$(git config --get hooks.copyrightholder)
-        if [ -n "${cr_holder}" ]
-        then
-            grep 'Copyright ' "${file}" | grep "${year}" | grep "${cr_holder}" >/dev/null
-            if [ $? -ne 0 ] ; then
+        if [ -n "${cr_holder}" ] ; then
+            if grep 'Copyright ' "${file}" | grep "${year}" | grep "${cr_holder}" >/dev/null ; then
                 echo "Error: $file seems to be missing a copyright string for ${cr_holder} with the year $year in it.";
                 exit 1
             fi
         else
-            grep 'Copyright ' "${file}" | grep "${year}" >/dev/null
-            if [ $? -ne 0 ] ; then
+
+            if grep 'Copyright ' "${file}" | grep "${year}" >/dev/null ; then
                 echo "Error: $file seems to be missing a copyright string with the year $year in it.";
                 exit 1
             fi

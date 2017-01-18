@@ -1,9 +1,11 @@
+---
 codecov:
-  branch: master
+  branch: develop
   bot: proinsias
 
 coverage:
   notify:
     slack:
       default:
+        # yamllint disable-line rule:line-length
         url: https://hooks.slack.com/services/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

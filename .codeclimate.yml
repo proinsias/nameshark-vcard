@@ -4,12 +4,20 @@ engines:
     enabled: true
     config:
       languages:
-      - python
+        - python
+    exclude_fingerprints:
+      - 35ab52de20a169e078f097cbcfcb78a0
   fixme:
     enabled: true
+    exclude_fingerprints:
+      - 994c6743fea399f2c7a5da1d664e8b01
+      - fad3255c32ed9fe569023de53a3e2ca0
+      - bb8d03b512c3ce99049505e2188058ec
   radon:
     enabled: true
+    config:
+      threshold: "C"
 ratings:
   paths:
-  - "**.py"
+    - "**.py"
 exclude_paths: []

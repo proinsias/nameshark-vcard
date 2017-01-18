@@ -31,8 +31,7 @@ function test_file {
     if [ ! -f "${file}" ] ; then
         return
     fi
-    head -n 1 "${file}" | grep 'bash' | grep '^#!/' > /dev/null
-    if [ "$?" -eq 0 ] ; then
+    if head -n 1 "${file}" | grep 'bash' | grep '^#!/' ; then
         set -e
         bash -n "${file}"
         set +e
