@@ -31,6 +31,7 @@ import nameshark_vcard.nameshark_vcard as nv
 FIRST_NAME = 'John'
 SURNAME = 'Smith'
 FN_FIELD = FIRST_NAME + ' ' + SURNAME
+NAMES = nv.NAMES(FIRST_NAME, SURNAME)
 
 VCARD = 'BEGIN:VCARD\nFN:' + FN_FIELD + '\nEND:VCARD'
 
@@ -40,10 +41,9 @@ ENTRY = {'details': '', 'first': FIRST_NAME, 'last': SURNAME, 'photoData': ''}
 
 CONTACTS = [ENTRY]
 
-JSON_STR = '{\n    "contacts": [\n        {\n            "details": "", \n' + \
-    '            "first": "' + FIRST_NAME + '", \n            "last": "' + \
-    SURNAME + '", \n            "photoData": ""\n        }\n    ], \n' + \
-    '    "name": "group"\n}'
+JSON_STR = \
+    '{\n"contacts":[\n{\n"details":"",\n' + '"first":"' + FIRST_NAME + \
+    '",\n"last":"' + SURNAME + '",\n"photoData":""\n}\n],\n' + '"name":"group"\n}'
 
 GROUP_NAME = 'group'
 
@@ -51,13 +51,13 @@ GROUP_NAME = 'group'
 @pytest.mark.incremental
 def test_get_pp_names():
     """Test get_pp_names() function."""
-    assert nv.get_pp_names(FN_FIELD) == nv.NAMES(FIRST_NAME, SURNAME)
+    assert nv.get_pp_names(FN_FIELD) == NAMES
 
 
 @pytest.mark.incremental
 def test_get_names():
     """Test get_names() function."""
-    assert nv.get_names(FN_FIELD) == nv.NAMES(FIRST_NAME, SURNAME)
+    assert nv.get_names(FN_FIELD) == NAMES
 
 
 @pytest.mark.incremental
@@ -75,10 +75,10 @@ def test_extract_contacts_from_vcard():
 @pytest.mark.incremental
 def test_convert_to_nameshark():
     """Test convert_to_nameshark() function."""
-    assert nv.convert_to_nameshark(GROUP_NAME, CONTACTS) == JSON_STR
+    assert nv.convert_to_nameshark(GROUP_NAME, CONTACTS).replace(' ', '') == JSON_STR
 
 
 @pytest.mark.incremental
 def test_vcard_to_nameshark():
     """Test vcard_to_nameshark() function."""
-    assert nv.vcard_to_nameshark(VCARD, GROUP_NAME) == JSON_STR
+    assert nv.vcard_to_nameshark(VCARD, GROUP_NAME).replace(' ', '') == JSON_STR
