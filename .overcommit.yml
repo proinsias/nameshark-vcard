@@ -116,6 +116,10 @@ PreCommit:
       - '--max-line-length=120'
   PythonFlake8:
     enabled: true
+    flags:
+      - '--doctests'
+      - '--max-complexity=10'
+      - '--max-line-length=120'
   Reek:
     enabled: true
   RuboCop:
