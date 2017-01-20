@@ -13,29 +13,24 @@ python:
   - "2.7"
   - "3.5"
 
-matrix:
-  include:
-    - python: 2.7
-      addons:
-        srcclr: true
-        apt:
-          sources:
-            - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-          packages:
-            - shellcheck
-
-cache:
-  apt: true
-  bundler: true
-  directories:
-    - $HOME/.cache/pip
-
 addons:
   apt:
     sources:
       - debian-sid    # Grab shellcheck from the Debian repo (o_O)
     packages:
       - shellcheck
+
+matrix:
+  include:
+    - python: 2.7
+      addons:
+        srcclr: true
+
+cache:
+  apt: true
+  bundler: true
+  directories:
+    - $HOME/.cache/pip
 
 before_cache:
   - ci/travis.before_cache.sh
