@@ -11,5 +11,5 @@ pytest==3.0.5
 python-crfsuite==0.9.1
 python-dateutil==2.6.0
 six==1.10.0
-vobject==0.9.3
+vobject==0.9.4
 yamllint==1.6.0
