@@ -68,7 +68,7 @@ pyflakes==1.5.0 \
 pylint==1.6.5 \
     --hash=sha256:eeeeb81c8095586b417ea0602c01f53d1c87694fcf3c866f8681457f94875a8e \
     --hash=sha256:ef901a34b62ed7a734370ba5b162d890231ba8822abe88c6dda1268e2575f5f1
-pytest==3.0.5 \
+pytest==3.0.6 \
     --hash=sha256:c97bdefdca852d48c3144b8a534a78527534793bac959c10211ed3e037925020 \
     --hash=sha256:4a003aa956f023ce91aa6e166b555e6f02a4b0aeb459ac61e14f64c0d39037fd
 python-crfsuite==0.9.1 \
