@@ -101,7 +101,7 @@ pyyaml==3.12 \
 six==1.10.0 \
     --hash=sha256:0ff78c403d9bccf5a425a6d31a12aa6b47f1c21ca4dc2573a7e2f32a97335eb1 \
     --hash=sha256:105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a
-vobject==0.9.4 \
+vobject==0.9.4.1 \
     --hash=sha256:e03b3629937ba241c9619b3d8461fdde4deefa1eb1b3f3b773bd0b1f71c49e3b
 wrapt==1.10.8 \
     --hash=sha256:4ea17e814e39883c6cf1bb9b0835d316b2f69f0f0882ffe7dad1ede66ba82c73  # via astroid
