@@ -135,7 +135,7 @@ vobject==0.9.4.1 \
     --hash=sha256:faea7d4fb3e2bc8ef6367e7f9b4ad0841aa1980fd5dd96d05c7a90e39880811c
 wrapt==1.10.8 \
     --hash=sha256:4ea17e814e39883c6cf1bb9b0835d316b2f69f0f0882ffe7dad1ede66ba82c73
-yamllint==1.6.0 \
+yamllint==1.6.1 \
     --hash=sha256:9ecc201538d7f2f8ff879cf11e0ff4ff35d5a9f901f63ba361957c70668a0e53 \
     --hash=sha256:a095c98728c95918b8a4153c855c13e158315f8150ddad1cf9c3e831f9d7ba87
 enum34==1.1.6 \
