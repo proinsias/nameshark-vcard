@@ -5,8 +5,8 @@
 #    pip-compile --generate-hashes --output-file requirements.txt requirements.in
 #
 appdirs==1.4.3 \
-    --hash=sha256:a53330b9d53b66aba1e26907dea2958982ebad92735f9faf3897b73c909a20c1 \
-    --hash=sha256:e2de7ae2b3be52542b711eacf4221683f1d2f7706a5550cb2c562ee4ba93ee74
+    --hash=sha256:d8b24664561d0d34ddfaec54636d502d7cea6e29c3eaf68f3df6180863e2166e \
+    --hash=sha256:9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92
 astroid==1.4.9 \
     --hash=sha256:944400d94e45865af150fb98700b27b788ddee5ad17c77d0725f67ac271f7a10 \
     --hash=sha256:a483e7891ce3a06dadfc6cb9095b0938aca58940d43576d72e4502b480c085d7
