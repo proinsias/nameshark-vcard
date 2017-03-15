@@ -131,7 +131,7 @@ six==1.10.0 \
     --hash=sha256:105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a
 vobject==0.9.4.1 \
     --hash=sha256:faea7d4fb3e2bc8ef6367e7f9b4ad0841aa1980fd5dd96d05c7a90e39880811c
-wrapt==1.10.9 \
+wrapt==1.10.10 \
     --hash=sha256:4ea17e814e39883c6cf1bb9b0835d316b2f69f0f0882ffe7dad1ede66ba82c73
 yamllint==1.6.1 \
     --hash=sha256:1c1fde0588308b6e01c27c750368bf47f44c5efade99d64dd5bce099862c97b9 \
