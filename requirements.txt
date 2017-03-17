@@ -68,7 +68,7 @@ probableparsing==0.0.1 \
     --hash=sha256:8114bbf889e1f9456fe35946454c96e42a6ee2673a90d4f1f9c46a406f543767
 probablepeople==0.5.2 \
     --hash=sha256:c3d7e41dd7bd0110553efa972d0e043b712e6bf9f5c20f9b7064f1e5003c6864
-py==1.4.32 \
+py==1.4.33 \
     --hash=sha256:2d4bba2e25fff58140e6bdce1e485e89bb59776adbe01d490baa6b1f37a3dd6b \
     --hash=sha256:c4b89fd1ff1162375115608d01f77c38cca1d0f28f37fd718005e19b28be41a7
 pycodestyle==2.3.1 \
