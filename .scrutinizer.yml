@@ -18,7 +18,7 @@ build:
                 command: tox
                 on_node: 3
             -
-                command: 'pytest'
+                command: 'python -m pytest'
                 coverage:
                     file: '.coverage'
                     # config_file: '.coveragerc'
