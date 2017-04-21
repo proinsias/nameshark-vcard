@@ -10,7 +10,7 @@ dependencies:
 
 test:
   override:
-    - py.test
+    - python -m pytest
 
   post:
     - curl -sSL https://download.sourceclear.com/ci.sh | sh

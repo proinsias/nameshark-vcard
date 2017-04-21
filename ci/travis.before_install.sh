@@ -15,3 +15,5 @@ git --version
 git tag
 shellcheck --version
 ruby --version
+gem update --system
+gem --version

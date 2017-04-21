@@ -35,13 +35,12 @@ Converts vCards to the JSON format expected by the Name Shark app
 [![Codacy](https://api.codacy.com/project/badge/Grade/3d8c09af6ee6433eac751444665ce1e0)](https://www.codacy.com/app/francis-odonovan/nameshark-vcard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=proinsias/nameshark-vcard&amp;utm_campaign=Badge_Grade)
 [![Scrutinizer Production Code Quality](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/badges/quality-score.png?b=production)](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/?branch=production)
 [![Scrutinizer Development Code Quality](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/proinsias/nameshark-vcard/?branch=develop)
-[![Code Health Develop](https://landscape.io/github/proinsias/nameshark-vcard/develop/landscape.svg?style=plastic)](https://landscape.io/github/proinsias/nameshark-vcard/develop)
 [![Code Health Production](https://landscape.io/github/proinsias/nameshark-vcard/production/landscape.svg?style=plastic)](https://landscape.io/github/proinsias/nameshark-vcard/production)
+[![Code Health Develop](https://landscape.io/github/proinsias/nameshark-vcard/develop/landscape.svg?style=plastic)](https://landscape.io/github/proinsias/nameshark-vcard/develop)
 
 [![Requires Production](https://requires.io/github/proinsias/nameshark-vcard/requirements.svg?branch=production)](https://requires.io/github/proinsias/nameshark-vcard/requirements/?branch=production)
 [![Requires Development](https://requires.io/github/proinsias/nameshark-vcard/requirements.svg?branch=develop)](https://requires.io/github/proinsias/nameshark-vcard/requirements/?branch=develop)
 [![VersionEye](https://www.versioneye.com/user/projects/57244381ba37ce00350af8c3/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57244381ba37ce00350af8c3)
-[![Libraries.io releases](https://img.shields.io/librariesio/release/proinsias/nameshark-vcard/1.0.3.svg)](https://libraries.io/github/proinsias/nameshark-vcard/)
 [![Libraries.io GitHub](https://img.shields.io/librariesio/github/proinsias/nameshark-vcard.svg)](https://libraries.io/github/proinsias/nameshark-vcard/)
 
 As you can tell from the number of badges above, I'm using this toy
