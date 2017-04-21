@@ -5,6 +5,8 @@ build:
         ruby: '2.3.1'
         python: '3.5.0'
     tests:
+        before:
+            - 'gem update --system'
         override:
             -
                 command: shellcheck-run
@@ -19,7 +21,7 @@ build:
                 command: 'pytest'
                 coverage:
                     file: '.coverage'
-                    #config_file: '.coveragerc'
+                    # config_file: '.coveragerc'
                     format: 'py-cc'
 
 checks:
