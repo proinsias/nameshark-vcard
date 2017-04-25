@@ -146,7 +146,7 @@ vobject==0.9.4.1 \
     --hash=sha256:faea7d4fb3e2bc8ef6367e7f9b4ad0841aa1980fd5dd96d05c7a90e39880811c
 wrapt==1.10.10 \
     --hash=sha256:42160c91b77f1bc64a955890038e02f2f72986c01d462d53cb6cb039b995cdd9
-yamllint==1.6.1 \
+yamllint==1.7.0 \
     --hash=sha256:1c1fde0588308b6e01c27c750368bf47f44c5efade99d64dd5bce099862c97b9 \
     --hash=sha256:6d6cc4d6545aa40a0edc9039d63ce0828cd50d273c775e7df2092c9b28c15ed4
 backports.functools_lru_cache==1.3 \
