@@ -46,7 +46,7 @@ future==0.16.0 \
 isort==4.2.5 \
     --hash=sha256:a0c38c1c5e4c70ea1141daa80c740372ad94351e92e9e07da1cd86ce65653dc4 \
     --hash=sha256:56b20044f43cf6e6783fe95d054e754acca52dd43fbe9277c1bdff835537ea5c
-lazy-object-proxy==1.2.2 \
+lazy-object-proxy==1.3.0 \
     --hash=sha256:ddd4cf1c74279c349cb7b9c54a2efa5105854f57de5f2d35829ee93631564268 \
     --hash=sha256:1efd529cdfad38daeb7708719b8acddf6718ccc65a4bf8b389d395292eb6f491 \
     --hash=sha256:d4de17625c0ab8b81337cf7408d53ad26c9605b4bbdc4f6532e87c9e645824dc \
