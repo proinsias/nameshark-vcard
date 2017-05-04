@@ -1,9 +1,10 @@
+---
 ruleset:
 
   respond_to_me:
 
     name: Respond to me when I comment mentioning @VarCI-bot
-    events: [ issue_comment ]
+    events: [issue_comment]
     when:
       - action = "created"
       - user.login = "proinsias"
@@ -21,17 +22,31 @@ ruleset:
   merge_for_me:
 
     name: Merge pull requests for me when I start a comment with "LGTM"
-    events: [ issue_comment ]
+    events: [issue_comment]
     when:
       - action = "created"
       - user.login = "proinsias"
       - body matches "/^LGTM/"
     merge: true
 
+  check_readme_links:
+
+    name: "Check for broken links in `README.md`"
+    events: [pull_request]
+    message: >
+      @{{ user.login }}, some of the links in the diff did not return
+      an HTTP status code of 200. Please fix these broken links and/or redirects:
+
+      {{ diff_links.broken }}
+    when:
+      - files has "README.md"
+      - action = "opened" or action = "reopened"
+      - count(diff_links.broken) > 0
+
   welcome_me:
 
     name: Introduce me to VarCI when I open a pull request
-    events: [ pull_request ]
+    events: [pull_request]
     when:
       - action = "opened"
       - user.login = "proinsias"
