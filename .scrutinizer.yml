@@ -17,12 +17,6 @@ build:
             # -
             #    command: tox
             #    on_node: 3
-            -
-                command: py.test
-                coverage:
-                    file: '.coverage'
-                    # config_file: '.coveragerc'
-                    format: 'py-cc'
 
 checks:
     python:
