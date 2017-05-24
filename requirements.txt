@@ -38,9 +38,6 @@ DoubleMetaphone==0.1 \
     --hash=sha256:d8766c8cbcae6c9abe430933f7e6b7438ca87673559a09133a0799261741b5fe \
     --hash=sha256:036540dd8e5652003facfed5aecaa98b24959eb4885b64becaea6a21ccb05cc6 \
     --hash=sha256:ac85b6757b28f5161b24c4aa25a923513a52edebedfa60158eed088ae468cf18
-flake8-bugbear==17.4.0 \
-    --hash=sha256:f459d93951b187aee9e584c7fa24684a9b8485f46c53cfbce2b7be7313a6d733 \
-    --hash=sha256:7490f848130771d83caa63b54080cbb8c04ccd22d647b9daaf87e7bafc3ce9c9
 flake8-builtins==0.3 \
     --hash=sha256:5081ece3ed5af8b7cb1351dec3ec2d0ac47b3284c1663f79640f0cd20d7dcf67 \
     --hash=sha256:c99c6494c78c493344bb4f45a778193cc1b7a3ecaabef4749b38481125338d86
@@ -243,6 +240,10 @@ enum34==1.1.6 \
     --hash=sha256:8ad8c4783bf61ded74527bffb48ed9b54166685e4230386a9ed9b1279e2df5b1 \
     --hash=sha256:2d81cbbe0e73112bdfe6ef8576f2238f2ba27dd0d55752a776c41d38b7da2850 \
     ; python_version == "3.4"
+flake8-bugbear==17.4.0 \
+    --hash=sha256:f459d93951b187aee9e584c7fa24684a9b8485f46c53cfbce2b7be7313a6d733 \
+    --hash=sha256:7490f848130771d83caa63b54080cbb8c04ccd22d647b9daaf87e7bafc3ce9c9 \
+    ; python_version > "3.4"
 singledispatch==3.4.0.3 \
     --hash=sha256:833b46966687b3de7f438c761ac475213e53b306740f1abfaa86e1d1aae56aa8 \
     --hash=sha256:5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c \
