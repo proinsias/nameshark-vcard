@@ -149,9 +149,9 @@ wrapt==1.10.10 \
 yamllint==1.7.0 \
     --hash=sha256:1166601fc3ea7927a16e3e3c9638582e0d3be3681f02234bb3889b34c5703123 \
     --hash=sha256:fb950e28dbfb36366cce8d78784380bbf8ec6e09c83ec1ef29b2eab7f88353da
-backports.functools-lru-cache==1.4 \
-    --hash=sha256:ac661058b4b9c770c0f045a71cf3cafedd1be11071d6116201ee5d7245c61034 \
-    --hash=sha256:444a21bcec4ae177da554321f81a78dc879eaa8f6ea9920cb904830585d31e95 \
+backports.functools_lru_cache==1.4 \
+    --hash=sha256:4ba998e881f285c1d1b73f5b6e3766539b4e162320f9589334400c5ddc35198c \
+    --hash=sha256:31f235852f88edc1558d428d890663c49eb4514ffec9f3650e7f3c9e4a12e36f \
     ; python_version == "2.7"
 colorama==0.3.9 \
     --hash=sha256:463f8483208e921368c9f306094eb6f725c6ca42b0f97e313cb5d5512459feda \
