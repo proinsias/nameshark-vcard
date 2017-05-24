@@ -31,10 +31,10 @@ if [ "${TRAVIS_BRANCH}" == "production" ]; then
     source activate venv
 fi
 python --version
-travis_retry python -m pip install -U pip wheel  # In production, use pyenv pip
-travis_retry python -m pip install --require-hashes --requirement \
+travis_retry python -m pip install --quiet --upgrade pip wheel  # In production, use pyenv pip
+travis_retry python -m pip install --quiet --require-hashes --requirement \
 ci/travis.requirements.txt
-travis_retry python -m pip install --require-hashes --requirement \
+travis_retry python -m pip install --quiet --require-hashes --requirement \
 requirements.txt
 # python setup.py install
 # python setup.py develop
