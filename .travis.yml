@@ -1,4 +1,5 @@
 ---
+
 sudo: false  # Use container-based infrastructure
 
 # safelist
@@ -8,7 +9,6 @@ branches:
     - develop
 
 language: python
-
 
 matrix:
   include:
@@ -31,8 +31,15 @@ matrix:
 cache:
   apt: true
   bundler: true
+  ccache: true
+  custom_install: true  # Since we override the default install command.
+  pip: true
   directories:
-    - $HOME/.cache/pip
+    - "${HOME}/.cache/pip"
+    - "${HOME}/.ccache"
+    - "${HOME}/.pip-cache"
+    - "${HOME}/spark"
+    - "${VIRTUAL_ENV}"
 
 before_cache:
   - ci/travis.before_cache.sh
