@@ -4,6 +4,9 @@
 #
 #    pip-compile --generate-hashes --output-file requirements.txt requirements.in
 #
+apipkg==1.4 \
+    --hash=sha256:65d2aa68b28e7d31233bb2ba8eb31cda40e4671f8ac2d6b241e358c9652a74b9 \
+    --hash=sha256:2e38399dbe842891fe85392601aab8f40a8f4cc5a9053c326de35a1cc0297ac6
 astroid==1.5.2 \
     --hash=sha256:9c19f72d865a539e91115cdb6a293b5c2fecb5f611fad38b21a961a925c2e3f1 \
     --hash=sha256:271f1c9ad6519a5dde2a7f0c9b62c2923b55e16569bdd888f9f9055cc5be37ed
@@ -38,6 +41,9 @@ DoubleMetaphone==0.1 \
     --hash=sha256:d8766c8cbcae6c9abe430933f7e6b7438ca87673559a09133a0799261741b5fe \
     --hash=sha256:036540dd8e5652003facfed5aecaa98b24959eb4885b64becaea6a21ccb05cc6 \
     --hash=sha256:ac85b6757b28f5161b24c4aa25a923513a52edebedfa60158eed088ae468cf18
+execnet==1.4.1 \
+    --hash=sha256:d2b909c7945832e1c19cfacd96e78da68bdadc656440cfc7dfe59b766744eb8c \
+    --hash=sha256:f66dd4a7519725a1b7e14ad9ae7d3df8e09b2da88062386e08e941cafc0ef3e6
 flake8-builtins==0.3 \
     --hash=sha256:5081ece3ed5af8b7cb1351dec3ec2d0ac47b3284c1663f79640f0cd20d7dcf67 \
     --hash=sha256:c99c6494c78c493344bb4f45a778193cc1b7a3ecaabef4749b38481125338d86
@@ -131,12 +137,6 @@ lazy-object-proxy==1.3.1 \
 mccabe==0.6.1 \
     --hash=sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42 \
     --hash=sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f
-pep257==0.7.0 \
-    --hash=sha256:d26cd2a4f572e0592f6967277136f581f924a4fe2aa38dcb7d4e532232689e80 \
-    --hash=sha256:f3d67547f5617a9cfeb4b8097ed94a954888315defaf6e9b518ff1719363bf03
-pep8==1.7.0 \
-    --hash=sha256:4fc2e478addcf17016657dff30b2d8d611e8341fac19ccf2768802f6635d7b8a \
-    --hash=sha256:a113d5f5ad7a7abacef9df5ec3f2af23a20a28005921577b15dd584d099d5900
 probableparsing==0.0.1 \
     --hash=sha256:509df25fdda4fd7c0b2a100f58cc971bd23daf26f3b3320aebf2616d2e10c69e \
     --hash=sha256:8114bbf889e1f9456fe35946454c96e42a6ee2673a90d4f1f9c46a406f543767
@@ -160,6 +160,8 @@ pylint==1.7.1 \
 pytest==3.1.0 \
     --hash=sha256:ac9378a549dd491fd7e468a1310983b7b7dee4894621384cfc9e101b148f4e11 \
     --hash=sha256:239c71f1804b57b07806f315752b42f675ddf3109a11ebe8d40eef043db12a83
+pytest-xdist==1.16.0 \
+    --hash=sha256:42e5a1e5da9d7cff3e74b07f8692598382f95624f234ff7e00a3b1237e0feba2
 python-crfsuite==0.9.2 \
     --hash=sha256:e5e14c303b71706a7c6c445227129e305e22fc548d441d838311d99efd645342 \
     --hash=sha256:1a6e57f4b54c9b12f6765f13d6077e483a80a6d8e93a94766a57d6253ba1b985 \
@@ -244,5 +246,3 @@ singledispatch==3.4.0.3 \
     --hash=sha256:833b46966687b3de7f438c761ac475213e53b306740f1abfaa86e1d1aae56aa8 \
     --hash=sha256:5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c \
     ; python_version < "3.4"
-pytest-xdist==1.16.0 \
-    --hash=sha256:42e5a1e5da9d7cff3e74b07f8692598382f95624f234ff7e00a3b1237e0feba2
