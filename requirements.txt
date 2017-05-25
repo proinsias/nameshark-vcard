@@ -246,9 +246,6 @@ enum34==1.1.6 \
     --hash=sha256:8ad8c4783bf61ded74527bffb48ed9b54166685e4230386a9ed9b1279e2df5b1 \
     --hash=sha256:2d81cbbe0e73112bdfe6ef8576f2238f2ba27dd0d55752a776c41d38b7da2850 \
     ; python_version < "3.4"
-pytest-xdist==1.16.0 \
-    --hash=sha256:42e5a1e5da9d7cff3e74b07f8692598382f95624f234ff7e00a3b1237e0feba2 \
-    ; python_version >= "3"
 singledispatch==3.4.0.3 \
     --hash=sha256:833b46966687b3de7f438c761ac475213e53b306740f1abfaa86e1d1aae56aa8 \
     --hash=sha256:5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c \
