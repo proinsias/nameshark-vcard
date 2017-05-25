@@ -2,7 +2,6 @@
 set -o errexit  # exit on first error
 set -o nounset  # don't allow use of unset variables
 set -o pipefail  # produce a failure return code if any pipeline command errors
-set -o xtrace  # echo commands
 shopt -s failglob  # cause globs that don't get expanded to cause errors
 
 . ci/travis_retry.sh
@@ -33,7 +32,7 @@ git config --global hooks.copyrightholder "Francis T. O'Donovan"
 echo "python version: $(python --version)"
 shellcheck --version
 ruby --version
-gem update --system
+gem update --system --no-document --silent
 gem --version
 echo "disk usage:"
 df --human-readable

@@ -160,8 +160,6 @@ pylint==1.7.1 \
 pytest==3.1.0 \
     --hash=sha256:ac9378a549dd491fd7e468a1310983b7b7dee4894621384cfc9e101b148f4e11 \
     --hash=sha256:239c71f1804b57b07806f315752b42f675ddf3109a11ebe8d40eef043db12a83
-pytest-xdist==1.16.0 \
-    --hash=sha256:42e5a1e5da9d7cff3e74b07f8692598382f95624f234ff7e00a3b1237e0feba2
 python-crfsuite==0.9.2 \
     --hash=sha256:e5e14c303b71706a7c6c445227129e305e22fc548d441d838311d99efd645342 \
     --hash=sha256:1a6e57f4b54c9b12f6765f13d6077e483a80a6d8e93a94766a57d6253ba1b985 \
@@ -242,6 +240,9 @@ enum34==1.1.6 \
     --hash=sha256:8ad8c4783bf61ded74527bffb48ed9b54166685e4230386a9ed9b1279e2df5b1 \
     --hash=sha256:2d81cbbe0e73112bdfe6ef8576f2238f2ba27dd0d55752a776c41d38b7da2850 \
     ; python_version < "3.4"
+pytest-xdist==1.16.0 \
+    --hash=sha256:42e5a1e5da9d7cff3e74b07f8692598382f95624f234ff7e00a3b1237e0feba2 \
+    ; python_version >= "3"
 singledispatch==3.4.0.3 \
     --hash=sha256:833b46966687b3de7f438c761ac475213e53b306740f1abfaa86e1d1aae56aa8 \
     --hash=sha256:5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c \
