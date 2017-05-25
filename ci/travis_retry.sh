@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -o errexit  # exit on first error
+set -o nounset  # don't allow use of unset variables
+set -o pipefail  # produce a failure return code if any pipeline command errors
+shopt -s failglob  # cause globs that don't get expanded to cause errors
 
 # https://github.com/travis-ci/travis-build/blob/73f74a94957f73eb54dc821f80c0c85ad8f8aab7/lib/travis/build/script/templates/header.sh#L168-L187
 

@@ -14,9 +14,6 @@ build:
             -
                 command: pylint-run nameshark_vcard
                 on_node: 2
-            # -
-            #    command: tox
-            #    on_node: 3
 
 checks:
     python:
