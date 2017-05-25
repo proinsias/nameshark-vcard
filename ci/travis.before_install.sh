@@ -32,7 +32,7 @@ git config --global hooks.copyrightholder "Francis T. O'Donovan"
 echo "python version: $(python --version)"
 shellcheck --version
 ruby --version
-gem update --system --no-document --silent
+gem update --system --no-document
 gem --version
 echo "disk usage:"
 df --human-readable
