@@ -100,13 +100,13 @@ PreCommit:
     enabled: true
   Mdl:
     enabled: true
-  Pep257:
+  Pep257:  # TODO: Replace with Pydocstyle ?
     enabled: true
     flags:
       - '--explain'
       - '--source'
       - '--verbose'
-  Pep8:
+  Pep8:  # TODO: Replace with Pycodestyle ?
     enabled: true
     flags:
       - '--max-line-length=120'
