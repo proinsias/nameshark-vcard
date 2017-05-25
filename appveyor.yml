@@ -1,6 +1,10 @@
 ---
 build: false
 
+cache:
+  - '%LOCALAPPDATA%\pip\Cache'
+  - '%APPDATA%\pip\Cache'
+
 environment:
   matrix:
     # Pre-installed Python versions, which Appveyor may upgrade to
