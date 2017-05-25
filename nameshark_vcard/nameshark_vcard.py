@@ -85,7 +85,7 @@ def get_names(fn_field):
 
     try:
         fn_field_split = fn_field.split(' ')
-    except TypeError:
+    except (TypeError, AttributeError):
         fn_field_split = ['']
 
     if first_name is None:
@@ -118,7 +118,7 @@ def get_photo(photo):
     # TODO: Add doctest above? or pytest
     if photo is not None:
         photo_data = base64.b64encode(photo)
-        photo_data = "data:image/jpeg;base64," + str(photo_data)
+        photo_data = "data:image/jpeg;base64," + photo_data.decode('utf8')
     else:
         photo_data = ""
 

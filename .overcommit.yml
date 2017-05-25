@@ -102,24 +102,31 @@ PreCommit:
     enabled: true
   Pep257:
     enabled: true
+    flags:
+      - '--explain'
+      - '--source'
+      - '--verbose'
   Pep8:
     enabled: true
     flags:
       - '--max-line-length=120'
+      - '--show-source'
   Pyflakes:
     enabled: true
-    flags:
-      - '--max-line-length=120'
   Pylint:
     enabled: true
     flags:
       - '--max-line-length=120'
+      - '--msg-template="{path}:{line}:{C}: {msg} ({symbol})"'
+      - '--reports=n'
+      - '--persistent=n'
   PythonFlake8:
     enabled: true
     flags:
       - '--doctests'
       - '--max-complexity=10'
       - '--max-line-length=120'
+      - '--show-source'
   Reek:
     enabled: true
   RuboCop:

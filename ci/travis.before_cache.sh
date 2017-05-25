@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -f "${HOME}/.cache/pip/log/debug.log"
+rm --force "${HOME}/.cache/pip/log/debug.log"
