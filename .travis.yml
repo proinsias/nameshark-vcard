@@ -8,92 +8,31 @@ branches:
     - production
     - develop
 
-language: generic
+language: python
 
 matrix:
   include:
     - os: linux
-      env: PYTHON='2.7.12'  # pyenv requres a full version specifier
-    - os: linux
-      env: PYTHON='3.4.5'
-    - os: linux
-      env: PYTHON='3.5.2'
-    - os: linux
-      env: PYTHON='3.5-dev'  # 3.5 development branch
-    - os: linux
-      env: PYTHON='3.6-dev'  # 3.6 development branch
-    - os: linux
-      env: PYTHON='pypy-5.4.1'
-    - os: linux
-      env: PYTHON='pypy2-5.4.1'
-# Wait until pypy3-3
-#    - os: linux
-#      env: PYTHON='pypy3-2.4.0'
-    - os: linux
-      env: PYTHON='miniconda2-latest'
-    - os: linux
-      env: PYTHON='miniconda3-latest'
-    - os: osx
-      env: PYTHON='2.7.12'
-    - os: osx
-      env: PYTHON='3.4.5'
-    - os: osx
-      env: PYTHON='3.5.2'
-    - os: osx
-      env: PYTHON='3.5-dev'
-    - os: osx
-      env: PYTHON='3.6-dev'
-    - os: osx
-      env: PYTHON='pypy-5.4.1'
-    - os: osx
-      env: PYTHON='pypy2-5.4.1'
-# Wait until pypy3-3
-#    - os: osx
-#      env: PYTHON='pypy3-2.4.0'
-    - os: osx
-      env: PYTHON='miniconda2-latest'
-    - os: osx
-      env: PYTHON='miniconda3-latest'
-  allow_failures:
-    - os: linux
-      env: PYTHON='3.5-dev'
-    - os: linux
-      env: PYTHON='3.6-dev'
-    - os: linux
-      env: PYTHON='pypy-5.4.1'
-    - os: linux
-      env: PYTHON='pypy2-5.4.1'
-#    - os: linux
-#      env: PYTHON='pypy3-2.4.0'
-    - os: linux
-      env: PYTHON='miniconda2-latest'
-    - os: linux
-      env: PYTHON='miniconda3-latest'
-    - os: osx
-      env: PYTHON='3.5-dev'
-    - os: osx
-      env: PYTHON='3.6-dev'
-    - os: osx
-      env: PYTHON='pypy-5.4.1'
-    - os: osx
-      env: PYTHON='pypy2-5.4.1'
-#    - os: osx
-#      env: PYTHON='pypy3-2.4.0'
-    - os: osx
-      env: PYTHON='miniconda2-latest'
-    - os: osx
-      env: PYTHON='miniconda3-latest'
-
-matrix:
-  include:
-    - python: 2.7
+      python: 2.7
       addons:
         srcclr: true
-        apt:
-          sources:
-            - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-          packages:
-            - shellcheck
+    - os: linux
+      python: 3.4
+    - os: linux
+      python: 3.5
+    - os: linux
+      python: 3.6
+    - os: linux
+      python: pypy
+    - os: linux
+      python: pypy3
+    - os: osx
+      python: 3.6
+  allow_failures:
+    - os: linux
+      python: pypy
+    - os: linux
+      python: pypy3
 
 cache:
   apt: true
@@ -119,8 +58,8 @@ before_cache:
   - ci/travis.before_cache.sh
 
 before_install:
- - travis_retry rvm install 2.3.2 && rvm --default use 2.3.2
- - ci/travis.before_install.sh
+  - travis_retry rvm install 2.3.2 && rvm --default use 2.3.2
+  - ci/travis.before_install.sh
 
 install:
   - ci/travis.install.sh
