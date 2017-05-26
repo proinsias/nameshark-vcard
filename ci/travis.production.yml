@@ -14,6 +14,8 @@ matrix:
   include:
     - os: linux
       python: 2.7
+      addons:
+        srcclr: true
     - os: linux
       python: 3.4
     - os: linux
@@ -31,17 +33,6 @@ matrix:
       python: pypy
     - os: linux
       python: pypy3
-
-matrix:
-  include:
-    - python: 2.7
-      addons:
-        srcclr: true
-        apt:
-          sources:
-            - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-          packages:
-            - shellcheck
 
 cache:
   apt: true
@@ -67,8 +58,8 @@ before_cache:
   - ci/travis.before_cache.sh
 
 before_install:
- - travis_retry rvm install 2.3.2 && rvm --default use 2.3.2
- - ci/travis.before_install.sh
+  - travis_retry rvm install 2.3.2 && rvm --default use 2.3.2
+  - ci/travis.before_install.sh
 
 install:
   - ci/travis.install.sh
