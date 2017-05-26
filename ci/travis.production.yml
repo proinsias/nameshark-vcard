@@ -8,81 +8,31 @@ branches:
     - production
     - develop
 
-language: generic
+language: python
 
 matrix:
   include:
     - os: linux
-      env: PYTHON='2.7.12'  # pyenv requres a full version specifier
+      python: 2.7
+      addons:
+        srcclr: true
     - os: linux
-      env: PYTHON='3.4.5'
+      python: 3.4
     - os: linux
-      env: PYTHON='3.5.2'
+      python: 3.5
     - os: linux
-      env: PYTHON='3.5-dev'  # 3.5 development branch
+      python: 3.6
     - os: linux
-      env: PYTHON='3.6-dev'  # 3.6 development branch
+      python: pypy
     - os: linux
-      env: PYTHON='pypy-5.4.1'
-    - os: linux
-      env: PYTHON='pypy2-5.4.1'
-    # Wait until pypy3-3
-    # - os: linux
-    #   env: PYTHON='pypy3-2.4.0'
-    - os: linux
-      env: PYTHON='miniconda2-latest'
-    - os: linux
-      env: PYTHON='miniconda3-latest'
+      python: pypy3
     - os: osx
-      env: PYTHON='2.7.12'
-    - os: osx
-      env: PYTHON='3.4.5'
-    - os: osx
-      env: PYTHON='3.5.2'
-    - os: osx
-      env: PYTHON='3.5-dev'
-    - os: osx
-      env: PYTHON='3.6-dev'
-    - os: osx
-      env: PYTHON='pypy-5.4.1'
-    - os: osx
-      env: PYTHON='pypy2-5.4.1'
-    # Wait until pypy3-3
-    # - os: osx
-    #   env: PYTHON='pypy3-2.4.0'
-    - os: osx
-      env: PYTHON='miniconda2-latest'
-    - os: osx
-      env: PYTHON='miniconda3-latest'
+      python: 3.6
   allow_failures:
     - os: linux
-      env: PYTHON='3.5-dev'
+      python: pypy
     - os: linux
-      env: PYTHON='3.6-dev'
-    - os: linux
-      env: PYTHON='pypy-5.4.1'
-    - os: linux
-      env: PYTHON='pypy2-5.4.1'
-    # - os: linux
-    #   env: PYTHON='pypy3-2.4.0'
-    - os: linux
-      env: PYTHON='miniconda2-latest'
-    - os: linux
-      env: PYTHON='miniconda3-latest'
-    - os: osx
-      env: PYTHON='3.5-dev'
-    - os: osx
-      env: PYTHON='3.6-dev'
-    - os: osx
-      env: PYTHON='pypy-5.4.1'
-    - os: osx
-      env: PYTHON='pypy2-5.4.1'
-    # - os: osx
-    #   env: PYTHON='pypy3-2.4.0'
-    - os: osx
-      env: PYTHON='miniconda2-latest'
-    - os: osx
-      env: PYTHON='miniconda3-latest'
+      python: pypy3
 
 cache:
   apt: true
@@ -108,9 +58,8 @@ before_cache:
   - ci/travis.before_cache.sh
 
 before_install:
+  - travis_retry rvm install 2.3.2 && rvm --default use 2.3.2
   - ci/travis.before_install.sh
-  - export PATH="/home/travis/.pyenv/bin:/Users/travis/.pyenv/shims:${PATH}"
-  - source activate venv
 
 install:
   - ci/travis.install.sh
