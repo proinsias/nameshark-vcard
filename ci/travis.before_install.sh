@@ -24,7 +24,7 @@ echo "date: $(date --iso-8601=seconds)"
 echo "pwd: $(pwd)"
 echo "uname: $(uname --all)"
 git --version
-echo "git tag: $(git describe --tags)"
+echo "git tag: $(git describe --always)"
 git config --global user.email "travis@travis.ci"  # overcommit Author
 git config --global user.name "Travis CI"  # overcommit Author
 git config --global hooks.copyrightholder "Francis T. O'Donovan"
