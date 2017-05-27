@@ -71,9 +71,6 @@ feel free to create an issue!
     + 3.4 (via Travis & AppVeyor)
     + 3.5 (via Travis)
     + 3.6 (via Travis)
-    + nightly (via Travis)
-    + pypy2 (via Travis)
-    + pypy3 (via Travis)
 * Platforms Tested:
     + Ubuntu 12.04 LTS Server Edition 64 bit (via Travis)
     + OSX/macOS (via Travis)
