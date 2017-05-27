@@ -2,7 +2,6 @@
 
 sudo: false  # Use container-based infrastructure
 
-# safelist
 branches:
   only:
     - production
@@ -16,16 +15,20 @@ matrix:
       python: 2.7
       addons:
         srcclr: true
-        sources:
-          - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-        packages:
-          - shellcheck
+        apt:
+          sources:
+            - debian-sid    # Grab shellcheck from the Debian repo (o_O)
+          packages:
+            - shellcheck
     - os: linux
       python: 3.4
     - os: linux
       python: 3.5
     - os: linux
       python: 3.6
+    - os: osx
+      python: 3.5
+  allow_failures:
     - os: osx
       python: 3.5
 
