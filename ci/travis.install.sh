@@ -29,7 +29,6 @@ travis_retry python -m pip install --require-hashes --requirement \
 ci/travis.requirements.txt
 travis_retry python -m pip install --require-hashes --requirement \
 requirements.txt
-# python setup.py install
-# python setup.py develop
-
+travis_retry python -m pip install --require-hashes --requirement \
+dev-requirements.txt
 # make all
