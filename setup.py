@@ -23,8 +23,14 @@
 # coding=utf-8
 
 """Setup script."""
+import os
 from setuptools import setup, find_packages
 
+description = 'Converts vcards to the json format expected by the Name Shark app.'
+if os.path.exists('README.rst'):
+    long_description = open('README.rst').read()
+else:
+    long_description = description
 
 setup(
     name='nameshark-vcard',
@@ -34,7 +40,8 @@ setup(
     license='MIT',
     author="Francis O'Donovan",
     author_email='francis.odonovan@gmail.com',
-    description='Converts vcards to the json format expected by the Name Shark app',
+    description=description,
+    long_description=long_description,
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

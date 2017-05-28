@@ -26,9 +26,9 @@ travis version --skip-completion-check
 python --version
 travis_retry python -m pip install --upgrade pip wheel
 travis_retry python -m pip install --require-hashes --requirement \
-ci/travis.requirements.txt
-travis_retry python -m pip install --require-hashes --requirement \
 requirements.txt
 travis_retry python -m pip install --require-hashes --requirement \
 dev-requirements.txt
+travis_retry python -m pip install --require-hashes --requirement \
+ci/travis.requirements.txt
 # make all
