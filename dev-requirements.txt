@@ -47,7 +47,8 @@ flake8-tidy-imports==1.0.6 \
     --hash=sha256:da4ed227309c0e307f2bf00fc212f6e7d25c66f0b34a837b11bc5360fb08acf8
 flake8-todo==0.7 \
     --hash=sha256:6e4c5491ff838c06fe5a771b0e95ee15fc005ca57196011011280fc834a85915
-flake8-tuple==0.2.13
+flake8_tuple==0.2.13 \
+    --hash=sha256:152f8f750b64e83f8ebd204e02e603028ac30447b19cd9e3b46d344c2c172ca1
 flake8==3.3.0 \
     --hash=sha256:83905eadba99f73fbfe966598aaf1682b3eb6755d2263c5b33a4e8367d60b0d1 \
     --hash=sha256:b907a26dcf5580753d8f80f1be0ec1d5c45b719f7bac441120793d1a70b03f12
@@ -137,5 +138,24 @@ wrapt==1.10.10 \
 yamllint==1.7.0 \
     --hash=sha256:1166601fc3ea7927a16e3e3c9638582e0d3be3681f02234bb3889b34c5703123 \
     --hash=sha256:fb950e28dbfb36366cce8d78784380bbf8ec6e09c83ec1ef29b2eab7f88353da
-flake8_tuple==0.2.13 \
-    --hash=sha256:152f8f750b64e83f8ebd204e02e603028ac30447b19cd9e3b46d344c2c172ca1
+backports.functools_lru_cache==1.4 \
+    --hash=sha256:4ba998e881f285c1d1b73f5b6e3766539b4e162320f9589334400c5ddc35198c \
+    --hash=sha256:31f235852f88edc1558d428d890663c49eb4514ffec9f3650e7f3c9e4a12e36f \
+    ; python_version == "2.7"
+colorama==0.3.9 \
+    --hash=sha256:463f8483208e921368c9f306094eb6f725c6ca42b0f97e313cb5d5512459feda \
+    --hash=sha256:48eb22f4f8461b1df5734a074b57042430fb06e1d61bd1e11b078c0fe6d7a1f1 \
+    ; sys_platform == "win32"
+configparser==3.5.0 \
+    --hash=sha256:5308b47021bc2340965c371f0f058cc6971a04502638d4244225c49d80db273a \
+    ; python_version < "3.2"
+enum34==1.1.6 \
+    --hash=sha256:6bd0f6ad48ec2aa117d3d141940d484deccda84d4fcd884f5c3d93c23ecd8c79 \
+    --hash=sha256:644837f692e5f550741432dd3f223bbb9852018674981b1664e5dc339387588a \
+    --hash=sha256:8ad8c4783bf61ded74527bffb48ed9b54166685e4230386a9ed9b1279e2df5b1 \
+    --hash=sha256:2d81cbbe0e73112bdfe6ef8576f2238f2ba27dd0d55752a776c41d38b7da2850 \
+    ; python_version < "3.4"
+singledispatch==3.4.0.3 \
+    --hash=sha256:833b46966687b3de7f438c761ac475213e53b306740f1abfaa86e1d1aae56aa8 \
+    --hash=sha256:5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c \
+    ; python_version < "3.4"
