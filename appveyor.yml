@@ -36,35 +36,18 @@ environment:
     #   PYTHON_VERSION: "3.5.x"
     #   PYTHON_ARCH: "64"
 
-    - PYTHON: "C:\\Miniconda"
-      PYTHON_VERSION: "2.7.x"
-      PYTHON_ARCH: "32"
-
-    - PYTHON: "C:\\Miniconda-x64"
-      PYTHON_VERSION: "2.7.x"
-      PYTHON_ARCH: "64"
-
-    # - PYTHON: "C:\\Miniconda3"
-    #   PYTHON_VERSION: "3.4.x"
-    #   PYTHON_ARCH: "32"
-
-    # - PYTHON: "C:\\Miniconda3-x64"
-    #   PYTHON_VERSION: "3.4.x"
-    #   PYTHON_ARCH: "64"
-
-    # - PYTHON: "C:\\Miniconda35"
-    #   PYTHON_VERSION: "3.5.x"
-    #   PYTHON_ARCH: "32"
-
-    # - PYTHON: "C:\\Miniconda35-x64"
-    #   PYTHON_VERSION: "3.5.x"
-    #   PYTHON_ARCH: "64"
-
 # matrix:
 #     fast_finish: true
 
 init:
   - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
+  - "ECHO %APPVEYOR_ACCOUNT_NAME% %APPVEYOR_PROJECT_NAME%"
+  - "ECHO %APPVEYOR_BUILD_FOLDER% %APPVEYOR_BUILD_ID% %APPVEYOR_BUILD_NUMBER% %APPVEYOR_BUILD_VERSION%"
+  - "ECHO %APPVEYOR_PULL_REQUEST_NUMBER%"
+  - "ECHO %APPVEYOR_JOB_ID%"
+  - "ECHO %APPVEYOR_REPO_NAME% %APPVEYOR_REPO_BRANCH% %APPVEYOR_REPO_TAG_NAME%"
+  - "ECHO %APPVEYOR_REPO_COMMIT% %APPVEYOR_REPO_COMMIT_AUTHOR%"
+  - "ECHO %APPVEYOR_REPO_COMMIT_MESSAGE%"
   - "%PYTHON%/python --version"
   - ps: "ls C:/Python*"
 
