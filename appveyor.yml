@@ -52,8 +52,9 @@ init:
   - ps: "ls C:/Python*"
 
 install:
-  - "%PYTHON%/python -m pip install -U pip"
-  - "%PYTHON%/Scripts/pip.exe install -r requirements.txt"
+  - "%PYTHON%/python -m pip install --upgrade pip wheel"
+  - "%PYTHON%/Scripts/pip.exe install --require-hashes --requirement requirements.txt"
+  - "%PYTHON%/Scripts/pip.exe install --require-hashes --requirement dev-requirements.txt"
 
 test_script:
   - "%PYTHON%/Scripts/py.test"
