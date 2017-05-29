@@ -2,7 +2,6 @@
 
 sudo: false  # Use container-based infrastructure
 
-# safelist
 branches:
   only:
     - production
@@ -38,7 +37,6 @@ cache:
     - "${HOME}/.cache/pip"
     - "${HOME}/.ccache"
     - "${HOME}/.pip-cache"
-    - "${HOME}/spark"
     - "${VIRTUAL_ENV}"
 
 before_cache:
