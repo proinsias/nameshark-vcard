@@ -5,9 +5,9 @@
 #    pip-compile --no-annotate --output-file dev-requirements.txt dev-requirements.in
 #    hashin $(cat dev-requirements.txt | grep -v \# | grep -v hash | grep -v ";" | cut -d "=" -f 1) -r dev-requirements.txt
 #
-astroid==1.5.2 \
-    --hash=sha256:9c19f72d865a539e91115cdb6a293b5c2fecb5f611fad38b21a961a925c2e3f1 \
-    --hash=sha256:271f1c9ad6519a5dde2a7f0c9b62c2923b55e16569bdd888f9f9055cc5be37ed
+astroid==1.5.3 \
+    --hash=sha256:39a21dd2b5d81a6731dc0ac2884fa419532dffd465cdd43ea6c168d36b76efb3 \
+    --hash=sha256:492c2a2044adbf6a84a671b7522e9295ad2f6a7c781b899014308db25312dd35
 flake8-builtins==0.4 \
     --hash=sha256:a6aa6ebf0ea848a3106524352a160b36071870f90e5b1f9d4563479088675f7d \
     --hash=sha256:55e26abbf398e600069882f41166de70372302baaf49985180d1531c47b9932a
