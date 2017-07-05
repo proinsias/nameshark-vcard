@@ -79,5 +79,5 @@ python-dateutil==2.6.0 \
 six==1.10.0 \
     --hash=sha256:0ff78c403d9bccf5a425a6d31a12aa6b47f1c21ca4dc2573a7e2f32a97335eb1 \
     --hash=sha256:105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a
-vobject==0.9.4.1 \
-    --hash=sha256:faea7d4fb3e2bc8ef6367e7f9b4ad0841aa1980fd5dd96d05c7a90e39880811c
+vobject==0.9.5 \
+    --hash=sha256:0f56cae196303d875682b9648b4bb43ffc769d2f0f800958e0a506af867b1243
