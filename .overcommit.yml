@@ -64,10 +64,11 @@ PreCommit:
   ExecutePermissions:
     enabled: true
     exclude:
+      - 'bin/update-requirements'
+      - 'ci/*.sh'
       - 'scripts/bash_syntax.sh'
       - 'scripts/copyright_year.sh'
       - 'scripts/freespace.sh'
-      - 'ci/*.sh'
   FixMe:
     enabled: true
   ForbiddenBranches:
