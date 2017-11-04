@@ -23,7 +23,6 @@ feel free to create an issue!
 
 [![Travis Development Build](https://travis-ci.org/proinsias/nameshark-vcard.svg?branch=develop)](https://travis-ci.org/proinsias/nameshark-vcard)
 [![AppVeyor Development Build](https://ci.appveyor.com/api/projects/status/0ta82u4piyao3ayg/branch/develop?svg=true)](https://ci.appveyor.com/project/proinsias/nameshark-vcard)
-[![CircleCI](https://circleci.com/gh/proinsias/nameshark-vcard.svg?style=svg)](https://circleci.com/gh/proinsias/nameshark-vcard)
 
 [![Codecov Development Coverage](https://codecov.io/gh/proinsias/nameshark-vcard/branch/develop/graph/badge.svg)](https://codecov.io/gh/proinsias/nameshark-vcard/branch/develop)
 [![Coveralls.io Development Coverage](https://coveralls.io/repos/github/proinsias/nameshark-vcard/badge.svg?branch=develop)](https://coveralls.io/github/proinsias/nameshark-vcard?branch=develop)
