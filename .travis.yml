@@ -13,7 +13,6 @@ matrix:
   include:
     - python: 2.7
       addons:
-        srcclr: true
         apt:
           sources:
             - debian-sid    # Grab shellcheck from the Debian repo (o_O)
