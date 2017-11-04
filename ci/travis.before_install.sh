@@ -33,5 +33,6 @@ shellcheck --version
 ruby --version
 gem update --system --no-document
 gem --version
+npm --version
 echo "disk usage:"
 df --human-readable

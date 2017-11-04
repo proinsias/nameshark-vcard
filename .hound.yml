@@ -3,7 +3,7 @@ fail_on_violations: true
 
 python:
   enabled: true
-  config_file: ci/hound.flake8.ini
+  config_file: tox.ini
 
 # ruby:
 #   config_file: .rubocop.yml

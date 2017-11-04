@@ -22,6 +22,9 @@ rubocop --version
 ruby-lint --version
 travis version --skip-completion-check
 
+# npm
+npm --version
+
 # python
 python --version
 travis_retry python -m pip install --upgrade pip wheel
