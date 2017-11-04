@@ -19,18 +19,6 @@ feel free to create an issue!
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/proinsias/nameshark-vcard.svg)](https://github.com/proinsias/nameshark-vcard/pulls)
 [![License](https://img.shields.io/github/license/proinsias/nameshark-vcard.svg)](https://github.com/proinsias/nameshark-vcard/blob/develop/LICENSE)
 
-## Production Badges
-
-[![Travis Production Build](https://travis-ci.org/proinsias/nameshark-vcard.svg?branch=production)](https://travis-ci.org/proinsias/nameshark-vcard)
-[![AppVeyor Production Build](https://ci.appveyor.com/api/projects/status/0ta82u4piyao3ayg/branch/production?svg=true)](https://ci.appveyor.com/project/proinsias/nameshark-vcard)
-
-[![Codecov Production Coverage](https://codecov.io/gh/proinsias/nameshark-vcard/branch/production/graph/badge.svg)](https://codecov.io/gh/proinsias/nameshark-vcard/branch/production)
-[![Coveralls.io Production Coverage](https://coveralls.io/repos/github/proinsias/nameshark-vcard/badge.svg?branch=production)](https://coveralls.io/github/proinsias/nameshark-vcard?branch=production)
-
-[![Code Health Production](https://landscape.io/github/proinsias/nameshark-vcard/production/landscape.svg?style=plastic)](https://landscape.io/github/proinsias/nameshark-vcard/production)
-
-[![Requires Production](https://requires.io/github/proinsias/nameshark-vcard/requirements.svg?branch=production)](https://requires.io/github/proinsias/nameshark-vcard/requirements/?branch=production)
-
 ## Development Badges
 
 [![Travis Development Build](https://travis-ci.org/proinsias/nameshark-vcard.svg?branch=develop)](https://travis-ci.org/proinsias/nameshark-vcard)
@@ -53,8 +41,7 @@ feel free to create an issue!
 
 ## Branch Organization
 
-    ├── production        <- Production branch with full test set.
-    ├── develop           <- Development branch with reduced test set.
+    ├── develop           <- Development branch with test set.
     └── developer/change  <- Developer sandbox branches without testing.
 
 * Python Versions Tested:
