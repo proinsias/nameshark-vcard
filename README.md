@@ -44,7 +44,6 @@ feel free to create an issue!
 
 [![Code Health Develop](https://landscape.io/github/proinsias/nameshark-vcard/develop/landscape.svg?style=plastic)](https://landscape.io/github/proinsias/nameshark-vcard/develop)
 
-[![Quantified Code](https://www.quantifiedcode.com/api/v1/project/3553d32e83a8475ea60237d6a02d7107/badge.svg)](https://www.quantifiedcode.com/app/project/3553d32e83a8475ea60237d6a02d7107)
 [![Code Climate GPA](https://codeclimate.com/github/proinsias/nameshark-vcard/badges/gpa.svg)](https://codeclimate.com/github/proinsias/nameshark-vcard)
 [![Code Climate Issue Count](https://codeclimate.com/github/proinsias/nameshark-vcard/badges/issue_count.svg)](https://codeclimate.com/github/proinsias/nameshark-vcard)
 [![Codacy](https://api.codacy.com/project/badge/Grade/3d8c09af6ee6433eac751444665ce1e0)](https://www.codacy.com/app/francis-odonovan/nameshark-vcard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=proinsias/nameshark-vcard&amp;utm_campaign=Badge_Grade)
