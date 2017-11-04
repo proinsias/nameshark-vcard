@@ -18,3 +18,10 @@ touch dev-requirements.txt
 # shellcheck disable=SC2046
 hashin --verbose $(grep -v \# dev-requirements.in2) -r dev-requirements.txt
 rm -f dev-requirements.in2
+
+pip-compile --verbose --no-annotate --output-file ci/travis.requirements.in2 ci/travis.requirements.in
+rm -f ci/travis.requirements.txt
+touch ci/travis.requirements.txt
+# shellcheck disable=SC2046
+hashin --verbose $(grep -v \# ci/travis.requirements.in2) -r ci/travis.requirements.txt
+rm -f ci/travis.requirements.in2

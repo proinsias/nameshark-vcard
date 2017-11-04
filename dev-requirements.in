@@ -14,12 +14,15 @@ flake8-string-format
 flake8-tidy-imports
 flake8-todo
 flake8-tuple
+hashin
 pathspec
 pep257
 pep8
+pip-tools
 pycodestyle
 pydocstyle
 pyflakes
 pylint
 pytest
+Sphinx
 yamllint
