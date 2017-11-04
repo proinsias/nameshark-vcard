@@ -1,6 +1,6 @@
 ---
 codecov:
-  branch: develop
+  branch: master
   bot: proinsias
 
 coverage:

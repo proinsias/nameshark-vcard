@@ -4,8 +4,7 @@ sudo: false  # Use container-based infrastructure
 
 branches:
   only:
-    - production
-    - develop
+    - master
 
 language: python
 
@@ -20,22 +19,22 @@ matrix:
   include:
     - os: linux
       python: 2.7
-      if: branch = develop AND type == cron
+      if: branch = master AND type == cron
     - os: linux
       python: 3.4
-      if: branch = develop AND type == cron
+      if: branch = master AND type == cron
     - os: linux
       python: 3.5
-      if: branch = develop AND type == cron
+      if: branch = master AND type == cron
     - os: linux
       python: 3.6
     - os: osx
       python: 3.6
-      if: branch = develop AND type == cron
+      if: branch = master AND type == cron
   allow_failures:
     - os: osx
       python: 3.6
-      if: branch = develop AND type == cron
+      if: branch = master AND type == cron
 
 cache:
   apt: true

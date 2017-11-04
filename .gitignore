@@ -60,7 +60,3 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
-
-# Ignore the RST version of the README.md file.
-# This generated for the PyPI distribution.
-README.rst

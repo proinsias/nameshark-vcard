@@ -6,7 +6,7 @@ set -o xtrace  # echo commands
 shopt -s failglob  # cause globs that don't get expanded to cause errors
 
 bash <(curl -s https://codecov.io/bash)
-if [ "${TRAVIS_BRANCH}" == "develop" ]; then
+if [ "${TRAVIS_BRANCH}" == "master" ]; then
     coverage combine
     coverage report
     coverage xml
