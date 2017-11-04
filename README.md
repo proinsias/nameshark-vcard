@@ -9,16 +9,15 @@ feel free to create an issue!
 
 ## Github Badges
 
-[![GitHub tag](https://img.shields.io/github/tag/proinsias/nameshark-vcard.svg)]()
-[![GitHub release](https://img.shields.io/github/release/proinsias/nameshark-vcard.svg)]()
-[![GitHub forks](https://img.shields.io/github/forks/proinsias/nameshark-vcard.svg?style=social&label=Fork)]()
-[![GitHub stars](https://img.shields.io/github/stars/proinsias/nameshark-vcard.svg?style=social&label=Star)]()
-[![GitHub watchers](https://img.shields.io/github/watchers/proinsias/nameshark-vcard.svg?style=social&label=Watch)]()
-[![GitHub followers](https://img.shields.io/github/followers/proinsias.svg?style=social&label=Follow)]()
-[![GitHub issues](https://img.shields.io/github/issues/proinsias/nameshark-vcard.svg)]()
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/proinsias/nameshark-vcard.svg)]()
-[![GitHub contributors](https://img.shields.io/github/contributors/proinsias/nameshark-vcard.svg)]()
-[![License](https://img.shields.io/github/license/proinsias/nameshark-vcard.svg)]()
+[![GitHub tag](https://img.shields.io/github/tag/proinsias/nameshark-vcard.svg)](https://github.com/proinsias/nameshark-vcard/releases)
+[![GitHub release](https://img.shields.io/github/release/proinsias/nameshark-vcard.svg)](https://github.com/proinsias/nameshark-vcard/releases)
+[![GitHub forks](https://img.shields.io/github/forks/proinsias/nameshark-vcard.svg?style=social&label=Fork)](https://github.com/proinsias/nameshark-vcard/network)
+[![GitHub stars](https://img.shields.io/github/stars/proinsias/nameshark-vcard.svg?style=social&label=Star)](https://github.com/proinsias/nameshark-vcard/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/proinsias/nameshark-vcard.svg?style=social&label=Watch)](https://github.com/proinsias/nameshark-vcard/subscription)
+[![GitHub followers](https://img.shields.io/github/followers/proinsias.svg?style=social&label=Follow)](https://github.com/proinsias?tab=followers)
+[![GitHub issues](https://img.shields.io/github/issues/proinsias/nameshark-vcard.svg)](https://github.com/proinsias/nameshark-vcard/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/proinsias/nameshark-vcard.svg)](https://github.com/proinsias/nameshark-vcard/pulls)
+[![License](https://img.shields.io/github/license/proinsias/nameshark-vcard.svg)](https://github.com/proinsias/nameshark-vcard/blob/develop/LICENSE)
 
 ## Production Badges
 
