@@ -9,22 +9,33 @@ branches:
 
 language: python
 
+addons:
+  apt:
+    sources:
+      - debian-sid    # Grab shellcheck from the Debian repo (o_O)
+    packages:
+      - shellcheck
+
 matrix:
   include:
-    - python: 2.7
-      addons:
-        apt:
-          sources:
-            - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-          packages:
-            - shellcheck
-    - python: 3.5
-      addons:
-        apt:
-          sources:
-            - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-          packages:
-            - shellcheck
+    - os: linux
+      python: 2.7
+      if: branch = develop AND type == cron
+    - os: linux
+      python: 3.4
+      if: branch = develop AND type == cron
+    - os: linux
+      python: 3.5
+      if: branch = develop AND type == cron
+    - os: linux
+      python: 3.6
+    - os: osx
+      python: 3.6
+      if: branch = develop AND type == cron
+  allow_failures:
+    - os: osx
+      python: 3.6
+      if: branch = develop AND type == cron
 
 cache:
   apt: true

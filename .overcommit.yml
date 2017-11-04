@@ -71,9 +71,6 @@ PreCommit:
       - 'scripts/update-requirements.sh'
   FixMe:
     enabled: true
-  ForbiddenBranches:
-    enabled: true
-    branches: ['production']
   HardTabs:
     enabled: true
   HtmlHint:
@@ -210,11 +207,6 @@ PostRewrite:
     enabled: true
     quiet: false
     recursive: true
-
-PrePush:
-  ProtectedBranches:
-    enabled: true
-    branches: ['production']
 
 PreRebase:
   MergedCommits:
