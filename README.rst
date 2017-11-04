@@ -30,6 +30,8 @@ Master Badges
 
 |Libraries.io GitHub|
 
+|ReadTheDocs|
+
 Branch Organization
 -------------------
 
@@ -90,3 +92,6 @@ Branch Organization
    :target: https://requires.io/github/proinsias/nameshark-vcard/requirements/?branch=master
 .. |Libraries.io GitHub| image:: https://img.shields.io/librariesio/github/proinsias/nameshark-vcard.svg
    :target: https://libraries.io/github/proinsias/nameshark-vcard/
+.. |ReadTheDocs| image:: https://readthedocs.org/projects/nameshark-vcard/badge/?version=latest
+   :target: http://nameshark-vcard.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
