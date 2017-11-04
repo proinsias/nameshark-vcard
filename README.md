@@ -26,7 +26,6 @@ feel free to create an issue!
 
 [![Codecov Development Coverage](https://codecov.io/gh/proinsias/nameshark-vcard/branch/develop/graph/badge.svg)](https://codecov.io/gh/proinsias/nameshark-vcard/branch/develop)
 [![Coveralls.io Development Coverage](https://coveralls.io/repos/github/proinsias/nameshark-vcard/badge.svg?branch=develop)](https://coveralls.io/github/proinsias/nameshark-vcard?branch=develop)
-[![Code Climate Coverage](https://codeclimate.com/github/proinsias/nameshark-vcard/badges/coverage.svg)](https://codeclimate.com/github/proinsias/nameshark-vcard/coverage)
 
 [![Code Health Develop](https://landscape.io/github/proinsias/nameshark-vcard/develop/landscape.svg?style=plastic)](https://landscape.io/github/proinsias/nameshark-vcard/develop)
 
