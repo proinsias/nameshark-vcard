@@ -1,3 +1,6 @@
+backports.functools-lru-cache; python_version < "3.3"
+colorama; sys_platform == "win32"
+enum34; python_version < "3.4"
 flake8
 flake8-builtins
 flake8-coding
@@ -24,6 +27,7 @@ pydocstyle
 pyflakes
 pylint
 pytest
+singledispatch; python_version < "3.4"
 Sphinx
-typing ; python_version<"3.4"
+typing; python_version<"3.4"
 yamllint
