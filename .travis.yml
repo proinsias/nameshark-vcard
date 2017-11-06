@@ -16,25 +16,26 @@ addons:
       - shellcheck
 
 matrix:
+  fast_finish: true
   include:
     - os: linux
       python: 2.7
-      if: branch = master AND type == cron
+      if: branch = master AND type = cron
     - os: linux
       python: 3.4
-      if: branch = master AND type == cron
+      if: branch = master AND type = cron
     - os: linux
       python: 3.5
-      if: branch = master AND type == cron
+      if: branch = master AND type = cron
     - os: linux
       python: 3.6
     - os: osx
       python: 3.6
-      if: branch = master AND type == cron
+      if: branch = master AND type = cron
   allow_failures:
     - os: osx
       python: 3.6
-      if: branch = master AND type == cron
+      if: branch = master AND type = cron
 
 cache:
   apt: true
