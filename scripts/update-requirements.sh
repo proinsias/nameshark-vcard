@@ -16,7 +16,7 @@ pip-compile --verbose --no-annotate --output-file dev-requirements.in2 dev-requi
 rm -f dev-requirements.txt
 touch dev-requirements.txt
 # shellcheck disable=SC2046
-hashin --verbose $(grep -v \# dev-requirements.in2) -r dev-requirements.txt
+hashin --verbose $(grep -v \# dev-requirements.in2 | cut -f 1 -d ";") -r dev-requirements.txt
 rm -f dev-requirements.in2
 
 pip-compile --verbose --no-annotate --output-file ci/travis.requirements.in2 ci/travis.requirements.in

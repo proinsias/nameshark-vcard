@@ -25,4 +25,5 @@ pyflakes
 pylint
 pytest
 Sphinx
+typing ; python_version<"3.4"
 yamllint
