@@ -62,9 +62,9 @@ flake8-mutable==1.2.0 \
 flake8-pep3101==1.1 \
     --hash=sha256:b57b42133b14dc4ac09169520cb8ebf4802db30babab98e1ebaf9f3a9da2c832 \
     --hash=sha256:f1e29f3de73c08a7a7149a924b1f2ce747a441dd5a0ab561c20aaa186c1f68f2
-flake8-polyfill==1.0.1 \
-    --hash=sha256:c77056b1e2cfce7b39d7634370062baf02438962a7d176ea717627b83b17f609 \
-    --hash=sha256:da3d14a829cb1ec6377b2065e3f3892cf64b81a24ad15bbdf003c7bfee01723f
+flake8-polyfill==1.0.2 \
+    --hash=sha256:12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9 \
+    --hash=sha256:e44b087597f6da52ec6393a709e7108b2905317d0c0b744cdca6208e670d8eda
 flake8-print==3.0.1 \
     --hash=sha256:255b01f0932f65fb8ce70a65f0f2abb4a05faf25f9fe53275cd13cacdc0179f5
 flake8-string-format==0.2.3 \
