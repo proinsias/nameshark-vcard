@@ -32,6 +32,8 @@ Master Badges
 
 |ReadTheDocs|
 
+|Gemnasium| |Snyk|
+
 Branch Organization
 -------------------
 
@@ -54,6 +56,8 @@ Branch Organization
    -  x86 (via AppVeyor)
    -  x64 (via AppVeyor)
 
+.. |Gemnasium| image:: https://beta.gemnasium.com/badges/github.com/proinsias/nameshark-vcard.svg
+   :target: https://beta.gemnasium.com/projects/github.com/proinsias/nameshark-vcard
 .. |GitHub tag| image:: https://img.shields.io/github/tag/proinsias/nameshark-vcard.svg
    :target: https://github.com/proinsias/nameshark-vcard/releases
 .. |GitHub release| image:: https://img.shields.io/github/release/proinsias/nameshark-vcard.svg
@@ -95,3 +99,5 @@ Branch Organization
 .. |ReadTheDocs| image:: https://readthedocs.org/projects/nameshark-vcard/badge/?version=latest
    :target: http://nameshark-vcard.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
+.. |snyk| image:: https://snyk.io/test/github/proinsias/nameshark-vcard/badge.svg?targetFile=Gemfile.lock
+   :target: https://snyk.io/test/github/proinsias/nameshark-vcard?targetFile=Gemfile.lock
