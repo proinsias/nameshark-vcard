@@ -53,9 +53,9 @@ flake8-debugger==3.0.0 \
 flake8-deprecated==1.3 \
     --hash=sha256:9fa5a0c5c81fb3b34c53a0e4f16cd3f0a3395078cfd4988011cbab5fb0afa7f7 \
     --hash=sha256:211951854837ced9ec997a75c6e5b957f3536a735538ee0620b76539fd3706cd
-flake8-docstrings==1.1.0 \
-    --hash=sha256:0d2a7c12e57db7bef56f820d0294bed7a577a18609246f70d223bc1bdccc185c \
-    --hash=sha256:62992d5b452e940837ad42905baf09efcd6199813f8657391893414be8db463a
+flake8-docstrings==1.2.0 \
+    --hash=sha256:2a4e5b6ad55771fd33725f917e177a968b93719d12948089d43e7b561a5fd2bb \
+    --hash=sha256:4ee2426690ff67184aec0fad05ea48b36dadd2f03cec3e37c29e4dc1cd272b10
 flake8-mutable==1.2.0 \
     --hash=sha256:ee9b77111b867d845177bbc289d87d541445ffcc6029a0c5c65865b42b18c6a6 \
     --hash=sha256:38fd9dadcbcda6550a916197bc40ed76908119dabb37fbcca30873666c31d2d5
