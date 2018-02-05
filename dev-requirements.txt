@@ -157,9 +157,9 @@ pyflakes==1.6.0 \
 Pygments==2.2.0 \
     --hash=sha256:78f3f434bcc5d6ee09020f92ba487f95ba50f1e3ef83ae96b9d5ffa1bab25c5d \
     --hash=sha256:dbae1046def0efb574852fab9e90209b23f556367b5a320c0bcb871c77c3e8cc
-pylint==1.8.1 \
-    --hash=sha256:c8e59da0f2f9990eb00aad1c1de16cd7809315842ebccc3f65ca9df46213df3b \
-    --hash=sha256:3035e44e37cd09919e9edad5573af01d7c6b9c52a0ebb4781185ae7ab690458b
+pylint==1.8.2 \
+    --hash=sha256:156839bedaa798febee72893beef00c650c2e7abafb5586fc7a6a56be7f80412 \
+    --hash=sha256:4fe3b99da7e789545327b75548cee6b511e4faa98afe268130fea1af4b5ec022
 pytest==3.2.5 \
     --hash=sha256:241d7e7798d79192a123ceaf64c602b4d233eacf6d6e42ae27caa97f498b7dc6 \
     --hash=sha256:6d5bd4f7113b444c55a3bbb5c738a3dd80d43563d063fc42dcb0aaefbdd78b81
