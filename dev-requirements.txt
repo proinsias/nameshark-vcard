@@ -65,8 +65,8 @@ flake8-pep3101==1.2.1 \
 flake8-polyfill==1.0.2 \
     --hash=sha256:12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9 \
     --hash=sha256:e44b087597f6da52ec6393a709e7108b2905317d0c0b744cdca6208e670d8eda
-flake8-print==3.0.1 \
-    --hash=sha256:255b01f0932f65fb8ce70a65f0f2abb4a05faf25f9fe53275cd13cacdc0179f5
+flake8-print==3.1.0 \
+    --hash=sha256:5010e6c138b63b62400da4b06afa33becc5e08bd1fcce9af3752445cf3342f54
 flake8-string-format==0.2.3 \
     --hash=sha256:774d56103d9242ed968897455ef49b7d6de272000cfa83de5814273a868832f1 \
     --hash=sha256:68ea72a1a5b75e7018cae44d14f32473c798cf73d75cbaed86c6a9a907b770b2
