@@ -12,9 +12,9 @@ echo "install start"
 # Get shellcheck.
 curl https://storage.googleapis.com/shellcheck/shellcheck-stable.linux.x86_64.tar.xz --output shellcheck-stable.tar.xz
 tar --xz --extract --file shellcheck-stable.tar.xz
-mv shellcheck-stable/shellcheck "${HOME}/bin/
+mv shellcheck-stable/shellcheck "${HOME}"/bin/
 rm --recursive --force shellcheck-stable shellcheck-stable.tar.xz
-"${HOME}/bin/shellcheck --version
+"${HOME}"/bin/shellcheck --version
 
 # ruby
 rvm --default use 2.3.2
