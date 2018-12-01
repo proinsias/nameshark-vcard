@@ -7,6 +7,8 @@ shopt -s failglob  # cause globs that don't get expanded to cause errors
 
 echo "script"
 
+export PATH="${HOME}/bin:${PATH}"
+
 ruby --version
 overcommit --sign
 overcommit --sign pre-commit

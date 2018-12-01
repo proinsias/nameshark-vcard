@@ -29,7 +29,6 @@ git config --global user.email "travis@travis.ci"  # overcommit Author
 git config --global user.name "Travis CI"  # overcommit Author
 git config --global hooks.copyrightholder "Francis T. O'Donovan"
 echo "python version: $(python --version)"
-shellcheck --version
 ruby --version
 gem update --system --no-document
 gem --version
