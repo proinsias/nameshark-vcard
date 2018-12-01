@@ -8,13 +8,6 @@ branches:
 
 language: python
 
-addons:
-  apt:
-    sources:
-      - debian-sid    # Grab shellcheck from the Debian repo (o_O)
-    packages:
-      - shellcheck
-
 matrix:
   fast_finish: true
   include:
