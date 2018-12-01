@@ -14,4 +14,3 @@ overcommit --sign
 overcommit --sign pre-commit
 overcommit --run
 python -m pytest
-coverage run --source nameshark_vcard -m py.test
