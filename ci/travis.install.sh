@@ -9,7 +9,7 @@ shopt -s failglob  # cause globs that don't get expanded to cause errors
 
 echo "install start"
 
-# shellcheck
+# Get shellcheck.
 curl https://storage.googleapis.com/shellcheck/shellcheck-stable.linux.x86_64.tar.xz --output shellcheck-stable.tar.xz
 tar --xz --extract --file shellcheck-stable.tar.xz
 mv shellcheck-stable/shellcheck "${HOME}/bin/
