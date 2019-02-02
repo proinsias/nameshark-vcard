@@ -70,9 +70,9 @@ flake8-print==3.1.0 \
 flake8-string-format==0.2.3 \
     --hash=sha256:68ea72a1a5b75e7018cae44d14f32473c798cf73d75cbaed86c6a9a907b770b2 \
     --hash=sha256:774d56103d9242ed968897455ef49b7d6de272000cfa83de5814273a868832f1
-flake8-tidy-imports==1.1.0 \
-    --hash=sha256:c05c9f7dadb5748a04b6fa1c47cb6ae5a8170f03cfb1dca8b37aec58c1ee6d15 \
-    --hash=sha256:5fc28c82bba16abb4f1154dc59a90487f5491fbdb27e658cbee241e8fddc1b91
+flake8-tidy-imports==2.0.0 \
+    --hash=sha256:8ed4d21d43bc9808dcf1474682bf15c9ba0a9476796845831b046e97fc0949df \
+    --hash=sha256:b3f5b96affd0f57cacb6621ed28286ce67edaca807757b51227043ebf7b136a1
 flake8-todo==0.7 \
     --hash=sha256:6e4c5491ff838c06fe5a771b0e95ee15fc005ca57196011011280fc834a85915
 flake8_tuple==0.2.13 \
