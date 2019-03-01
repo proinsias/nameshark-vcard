@@ -266,8 +266,8 @@ typing==3.6.6 \
 urllib3==1.24.1 \
     --hash=sha256:61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39 \
     --hash=sha256:de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22
-wrapt==1.10.11 \
-    --hash=sha256:d4d560d479f2c21e1b5443bbd15fe7ec4b37fe7e53d335d3b9b0a7b1226fe3c6
+wrapt==1.11.1 \
+    --hash=sha256:4aea003270831cceb8a90ff27c4031da6ead7ec1886023b80ce0dfe0adf61533
 yamllint==1.15.0 \
     --hash=sha256:5a53b6ebea563f944420d2964233173532af00a9579ab2c48c4cf8c56b704050 \
     --hash=sha256:8f25759997acb42e52b96bf3af0b4b942e6516b51198bebd3402640102006af7
