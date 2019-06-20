@@ -212,9 +212,9 @@ six==1.12.0 \
 snowballstemmer==1.2.1 \
     --hash=sha256:919f26a68b2c17a7634da993d91339e288964f93c274f1343e3bbbe2096e1128 \
     --hash=sha256:9f3bcd3c401c3e862ec0ebe6d2c069ebc012ce142cce209c098ccb5b09136e89
-Sphinx==2.0.1 \
-    --hash=sha256:423280646fb37944dd3c85c58fb92a20d745793a9f6c511f59da82fa97cd404b \
-    --hash=sha256:de930f42600a4fef993587633984cc5027dedba2464bcf00ddace26b40f8d9ce
+Sphinx==2.1.2 \
+    --hash=sha256:22538e1bbe62b407cf5a8aabe1bb15848aa66bb79559f42f5202bbce6b757a69 \
+    --hash=sha256:f9a79e746b87921cabc3baa375199c6076d1270cee53915dbd24fdbeaaacc427
 sphinxcontrib-applehelp==1.0.1 \
     --hash=sha256:edaa0ab2b2bc74403149cb0209d6775c96de797dfd5b5e2a71981309efab3897 \
     --hash=sha256:fb8dee85af95e5c30c91f10e7eb3c8967308518e0f7488a2828ef7bc191d0d5d
