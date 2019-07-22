@@ -157,9 +157,9 @@ pep8==1.7.1 \
 pip-api==0.0.8 \
     --hash=sha256:31f31a8f1e74f90af8f13b5a8ca11e84227d88735ad82525e03cc2afb7965c07 \
     --hash=sha256:5a504d4536ccd1d87f46f7b10442d09bbe5a765a298a4580ab05ea7cfcda6f4b
-pip-tools==3.7.0 \
-    --hash=sha256:4ff38ab655bec47db2d5a82fa6c6807e231ecddf3b7cbb2f2b957a9b11f016c3 \
-    --hash=sha256:542cc32393ec8e97932b4710462567e3ecbd0a1d483d8b1d5ef05bc6ef83f7f8
+pip-tools==3.9.0 \
+    --hash=sha256:0b866b6da097fa1f060a1ce3a22bccf515bf6af7654370bcb6d0fcc65daba2b5 \
+    --hash=sha256:2457106d7df6b627cc54819e986db75ba5fbe8243ae3bdfbb79159c1f610e90b
 pluggy==0.11.0 \
     --hash=sha256:25a1bc1d148c9a640211872b4ff859878d422bccb59c9965e04eed468a0aa180 \
     --hash=sha256:964cedd2b27c492fbf0b7f58b3284a09cf7f99b0f715941fb24a439b3af1bd1a
