@@ -9,6 +9,13 @@ shopt -s failglob  # cause globs that don't get expanded to cause errors
 
 echo "install start"
 
+# Get shellcheck.
+curl https://storage.googleapis.com/shellcheck/shellcheck-stable.linux.x86_64.tar.xz --output shellcheck-stable.tar.xz
+tar --xz --extract --file shellcheck-stable.tar.xz
+mv shellcheck-stable/shellcheck "${HOME}"/bin/
+rm --recursive --force shellcheck-stable shellcheck-stable.tar.xz
+"${HOME}"/bin/shellcheck --version
+
 # ruby
 rvm --default use 2.3.2
 ruby --version
@@ -32,6 +39,4 @@ travis_retry python -m pip install --require-hashes --requirement \
 requirements.txt
 travis_retry python -m pip install --require-hashes --requirement \
 dev-requirements.txt
-travis_retry python -m pip install --require-hashes --requirement \
-ci/travis.requirements.txt
 # make all
