@@ -17,7 +17,7 @@ rm --recursive --force shellcheck-stable shellcheck-stable.tar.xz
 "${HOME}"/bin/shellcheck --version
 
 # ruby
-rvm --default use 2.3.2
+rvm --default use 2.6.2
 ruby --version
 travis_retry bundle install
 bundle --version
