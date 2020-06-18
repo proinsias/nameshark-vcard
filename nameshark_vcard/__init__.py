@@ -19,4 +19,6 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+# -*- coding: utf-8 -*-
+
 """Convert vCard-formatted string to the JSON format expected by Name Shark."""

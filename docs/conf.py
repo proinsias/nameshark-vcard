@@ -20,6 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 # coding=utf-8
+# -*- coding: utf-8 -*-
+
 """Sphinx config file."""
 
 
