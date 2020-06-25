@@ -12,22 +12,19 @@ matrix:
   fast_finish: true
   include:
     - os: linux
-      python: 2.7
-      if: branch = master AND type = cron
+      python: 3.8
     - os: linux
-      python: 3.4
-      if: branch = master AND type = cron
-    - os: linux
-      python: 3.5
+      python: 3.7
       if: branch = master AND type = cron
     - os: linux
       python: 3.6
+      if: branch = master AND type = cron
     - os: osx
-      python: 3.6
+      python: 3.8
       if: branch = master AND type = cron
   allow_failures:
     - os: osx
-      python: 3.6
+      python: 3.8
       if: branch = master AND type = cron
 
 cache:
