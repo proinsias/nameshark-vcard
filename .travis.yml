@@ -20,11 +20,11 @@ matrix:
       python: 3.6
       if: branch = master AND type = cron
     - os: osx
-      python: 3.8
+      python: 3.7
       if: branch = master AND type = cron
   allow_failures:
     - os: osx
-      python: 3.8
+      python: 3.7
       if: branch = master AND type = cron
 
 cache:
@@ -38,7 +38,7 @@ cache:
     - "${HOME}/.ccache"
     - "${HOME}/.pip-cache"
     - "${VIRTUAL_ENV}"
-    - node_modules # NPM packages
+    - node_modules  # NPM packages
 
 before_cache:
   - ci/travis.before_cache.sh
