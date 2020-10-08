@@ -25,14 +25,11 @@ Branch Organization
 
 -  Python Versions Tested:
 
-   -  3.6
-   -  3.7
    -  3.8
 
 -  Platforms Tested:
 
    -  Ubuntu 12.04 LTS Server Edition 64 bit
-   -  OSX/macOS
 
 .. |GitHub tag| image:: https://img.shields.io/github/tag/proinsias/nameshark-vcard.svg
    :target: https://github.com/proinsias/nameshark-vcard/releases
