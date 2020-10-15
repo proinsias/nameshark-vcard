@@ -1,6 +1,9 @@
 ---
 
-sudo: false  # Use container-based infrastructure
+os: linux
+virt: lxd  # this will redirect you to LXD based container - very fast to start and run
+# virt: vm  # this will redirect you to ‘full-vm’
+group: edge  # Required for now until build environment images are promoted.
 
 branches:
   only:
