@@ -1,9 +1,7 @@
 ---
 
 os: linux
-virt: lxd  # this will redirect you to LXD based container - very fast to start and run
-# virt: vm  # this will redirect you to ‘full-vm’
-group: edge  # Required for now until build environment images are promoted.
+dist: xenial
 
 branches:
   only:
@@ -11,7 +9,7 @@ branches:
 
 language: python
 
-matrix:
+jobs:
   fast_finish: true
   include:
     - os: linux
@@ -21,7 +19,6 @@ cache:
   apt: true
   bundler: true
   ccache: true
-  custom_install: true  # Since we override the default install command.
   pip: true
   directories:
     - "${HOME}/.cache/pip"
