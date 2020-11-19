@@ -9,10 +9,6 @@ shopt -s failglob  # cause globs that don't get expanded to cause errors
 
 echo "install start"
 
-# Login
-
-travis login --github-token "${GITHUB_TOKEN}"
-
 # Get shellcheck.
 curl --fail --location --show-error --silent https://github.com/koalaman/shellcheck/releases/download/stable/shellcheck-stable.linux.x86_64.tar.xz --output shellcheck-stable.tar.xz
 tar --xz --extract --file shellcheck-stable.tar.xz
