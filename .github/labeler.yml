@@ -1,0 +1,35 @@
+---
+# https://github.com/actions/labeler
+
+Build 🔨:
+  - ".codeclimate.yml"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - ".github/**/*"
+  - ".hound.yml"
+
+Code Quality 🔎:
+  - ".mdl.rb"
+  - ".mdlrc"
+  - ".overcommit.yml"
+  - ".pylintrc"
+  - ".varci.yml"
+  - ".yamllint.yml"
+  - "tox.ini"
+
+Documentation 📁:
+  - "docs/**/*"
+
+Source 🗂:
+  - "CHANGELOG.md"
+  - ".gitignore"
+  - "dev-requirements.in"
+  - "dev-requirements.txt"
+  - "LICENSE"
+  - "MANIFEST.in"
+  - "nameshark_vcard/**/*"
+  - "README.rst"
+  - "requirements.txt"
+  - "setup.py"
+  - "scripts/**/*"
+  - "tests/**/*"
