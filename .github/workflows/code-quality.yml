@@ -34,10 +34,7 @@ jobs:
           path: "."
           pattern: "*.sh"
           reporter: github-pr-review
-          shellcheck_flags:
-            - '--external-sources'
-            - '--format=gcc'
-            - '--shell=bash'
+          shellcheck_flags: '--external-sources --format=gcc --shell=bash'
 
       - name: Yamllint Github Action
         uses: karancode/yamllint-github-action@v2.0.0
